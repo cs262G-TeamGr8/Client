@@ -38,3 +38,10 @@ html {
 	margin-left: 335px;
 	z-index: -1;
 }
+
+.action1 {
+	position: absolute;
+	top: 200px;
+	left: -200px;
+	clip: rect(0px, 350px, 640px, 200px);
+}
