@@ -75,11 +75,21 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\menu.css" />
+    <Content Include="css\page.css" />
     <Content Include="index.html" />
+    <Content Include="resources\action-pic1.jpg" />
+    <Content Include="resources\calvin-knight.png" />
+    <Content Include="resources\title-word.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\" />
+    <Folder Include="views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
