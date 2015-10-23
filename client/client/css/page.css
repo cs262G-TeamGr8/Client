@@ -11,6 +11,17 @@ html {
     background: -ms-linear-gradient( to bottom, #F9FB8D, #F3CD00);
     background: -o-linear-gradient( to bottom, #F9FB8D, #F3CD00);
     background: linear-gradient( to bottom, #F9FB8D, #F3CD00);
+
+}
+
+
+.action1{display:block;}
+
+/* This section blocks any element with class='action1' from appearing on mobile.
+	This particular phrasing is just testing, and may be changed at any time  */
+@media (max-width : 1000px) {
+	.action1 {display:none;}
+	.visibledesktop {display:none;}
 }
 
 .page-bg {
