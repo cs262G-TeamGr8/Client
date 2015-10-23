@@ -15,13 +15,12 @@ html {
 }
 
 
-.action1{display:block;}
 
 /* This section blocks any element with class='action1' from appearing on mobile.
 	This particular phrasing is just testing, and may be changed at any time  */
+.desktoponly{display:block;}
 @media (max-width : 1000px) {
-	.action1 {display:none;}
-	.visibledesktop {display:none;}
+	.desktoponly {display:none;}
 }
 
 .page-bg {
@@ -50,7 +49,7 @@ html {
 	z-index: -1;
 }
 
-.action1 {
+#action1 {
 	position: absolute;
 	top: 200px;
 	left: -200px;
