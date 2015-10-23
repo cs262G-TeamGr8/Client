@@ -19,8 +19,12 @@ html {
 /* This section blocks any element with class='action1' from appearing on mobile.
 	This particular phrasing is just testing, and may be changed at any time  */
 .desktoponly{display:block;}
+.mobileonly{display:block;}
 @media (max-width : 1000px) {
 	.desktoponly {display:none;}
+}
+@media(min-width : 1001px){
+	.mobileonly {display:none;}
 }
 
 .page-bg {
@@ -31,15 +35,6 @@ html {
 	left: 50%;
 	margin: 0 200px;
 	z-index: 50;
-}
-
-.knight {
-	position: absolute;
-	top: -180px;
-	left: -180px;
-	z-index: -1;
-	opacity: .5;
-	clip: rect(0px,500px,350px,0px);
 }
 
 .title {
@@ -54,4 +49,13 @@ html {
 	top: 200px;
 	left: -200px;
 	clip: rect(0px, 350px, 640px, 200px);
+}
+
+#knight {
+	position: absolute;
+	top: -180px;
+	left: -180px;
+	z-index: -1;
+	opacity: .5;
+	clip: rect(0px,500px,350px,0px);
 }

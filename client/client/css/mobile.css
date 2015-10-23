@@ -1,0 +1,73 @@
+#hamburgerbutton {
+  background: none;
+  position: absolute;
+  top: 100;
+  right: 100;
+  line-height: 45px;
+  padding: 0px 15px 0px 15px;
+  color: #fff;
+  border: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 10000000000000;
+}
+
+#mobilemenu {
+  z-index: 1000000;
+  font-weight: bold;
+  font-size: 0.8em;
+  width: 100%;
+  background: #131313;
+  position: absolute;
+  text-align: center;
+}
+
+#mobilemenu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+#mobilemenu li {
+  display: block;
+  padding: 15px 0 15px 0;
+  border-bottom: #1d1f20 1px solid;
+}
+
+#mobilemenu li:hover {
+  display: block;
+  background: #181818;
+  padding: 15px 0 15px 0;
+  border-bottom: #1d1f20 1px solid;
+}
+
+#mobilemenu ul li a {
+  text-decoration: none;
+  margin: 0px;
+  color: #fff;
+}
+
+#mobilemenu ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#mobilemenu a {
+  text-decoration: none;
+  color: white;
+}
+
+#mobilemenu a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.glyphicon-home {
+  color: white;
+  font-size: 1.5em;
+  margin-top: 5px;
+  margin: 0 auto;
+}
