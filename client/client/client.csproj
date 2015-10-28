@@ -66,6 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js\angular-route.min.js" />
+    <Content Include="js\angular.min.js" />
+    <Content Include="js\app.js" />
+    <Content Include="js\ui-bootstrap-tpls-0.14.3.min.js" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\IntramuralTest.pubxml" />
     <None Include="Web.Debug.config">
@@ -89,7 +93,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="js\" />
+    <Folder Include="js\controllers\" />
     <Folder Include="views\" />
   </ItemGroup>
   <PropertyGroup>
