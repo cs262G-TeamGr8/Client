@@ -1,85 +1,51 @@
-﻿<!doctype html>
-<html lang=''>
+﻿<!-- index.html -->
+<!-- Main Page -->
+
+<!doctype html>
+
+<!-- define angular app -->
+<html lang='' ng-app="CalvinIntramuralsApp">
 <head>
+
+    <!-- SCROLLS -->
+    <!-- load css files from downloaded content or created files -->
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="css/page.css" />
     <link rel="stylesheet" href="css/mobile.css"/>
+
+    <!-- SPELLS -->
+    <!-- load angular and bootstrap -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- CONTROLLERS -->
+    <!-- load angular controllers -->
+
+    <!-- RESOURCES -->
+    <!-- load necessary resources -->
     <script src="script/script.js"> </script>
     <link rel="shortcut icon" href="//www.calvin.edu/favicon.ico" />
+
     <title>Calvin Intramurals</title>
 </head>
-<body>
 
+<!-- define angular controller -->
+<body ng-controller="mainController">
 
-    <div style='height:140px;'>
-    </div>
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
 
-    <div><img src='resources/calvin-knight.png' id='knight' height='500px' width='500px' />
-        
-    </div>
-    <div><img src='resources/title-word.png' class='title' height='75px' width='700px' />
-     <a href="index.html" title="Return to Home">
-     </div>
-    <div><img src='resources/action-pic1.jpg' id='action1' class='desktoponly'/></div>
+        <!-- angular templating -->
+        <div ng-view>
 
-    <!--mobile menu-->
-    <div id='mobilemenu' class='mobileonly'>
-        <button id='hamburgerbutton' class='mobileonly' onclick="hideMenu(); return false;">
-            &#9776;
-        </button>  
-        <ul>
-            <a href="#"><li>Teams</li></a>
-            <a href="#"><li>Leagues</li></a>
-            <a href="#"><li>Settings</li></a>
-            <a href="#"><li>Contact us</li></a>
-        </ul>
+            <!-- this is where content will be injected -->
+
+        </div>
 
     </div>
-
-    <!--Desktop menu-->
-    <div id='cssmenu' class='desktoponly'>
-        <ul>
-            <li class='has-sub'>
-                <a href='#'><span>My Teams</span></a>
-                <ul>
-                    <li><a href='#'><span>A-Team</span></a></li>
-                    <li class='last'><a href='#'><span>Brick Squad</span></a></li>
-                </ul>
-            </li>
-            <li class='has-sub'>
-                <a href='#'><span>Leagues</span></a>
-                <ul>
-                    <li class='has-sub'>
-                        <a href='#'><span>Basketball</span></a>
-                        <ul>
-                            <li><a href='#'><span>Advanced</span></a></li>
-                            <li class='last'><a href='#'><span>Recreational</span></a></li>
-                        </ul>
-                    </li>
-                    <li class='last'><a href='#'><span>Flag Football</span></a></li>
-                    <li class='has-sub'>
-                        <a href='#'><span>Soccer</span></a>
-                        <ul>
-                            <li><a href='#'><span>Advanced</span></a></li>
-                            <li class='last'><a href='#'><span>Recreational</span></a></li>
-                        </ul>
-                    </li>
-                    <li class='has-sub'>
-                        <a href='#'><span>Spikeball</span></a>
-                        <ul>
-                            <li><a href='#'><span>Advanced</span></a></li>
-                            <li class='last'><a href='#'><span>Recreational</span></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href='#'><span>Teams</span></a></li>
-            <li><a href='#'><span>Settings</span></a></li>
-            <li class='last'><a href="mailto:jab83@students.calvin.edu?subject=Website%20Feedback"<span>Contact Us</span></a></li>
-        </ul>
-    </div>
-    
-    <! -- Add homepage content (schedules, news, pictures, etc) -- >
 
 </body>
 </html>

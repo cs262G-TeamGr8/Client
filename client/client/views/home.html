@@ -1,0 +1,74 @@
+﻿<!-- Home Page -->
+<!-- Displays home page whenever user clicks on logo or when page is first loaded -->
+
+<div style='height:140px;'>
+</div>
+
+<div>
+    <img src='resources/calvin-knight.png' id='knight' height='500px' width='500px' />
+
+</div>
+<div>
+    <img src='resources/title-word.png' class='title' height='75px' width='700px' />
+    <a href="index.html" title="Return to Home">
+</div>
+<div><img src='resources/action-pic1.jpg' id='action1' class='desktoponly' /></div>
+
+<!--mobile menu-->
+<div id='mobilemenu' class='mobileonly'>
+    <button id='hamburgerbutton' class='mobileonly' onclick="hideMenu(); return false;">
+        &#9776;
+    </button>
+    <ul>
+        <a href="#"><li>Teams</li></a>
+        <a href="#"><li>Leagues</li></a>
+        <a href="#"><li>Settings</li></a>
+        <a href="#"><li>Contact us</li></a>
+    </ul>
+
+</div>
+
+<!--Desktop menu-->
+<div id='cssmenu' class='desktoponly'>
+    <ul>
+        <li class='has-sub'>
+            <a href='#'><span>My Teams</span></a>
+            <ul>
+                <li><a href='#'><span>A-Team</span></a></li>
+                <li class='last'><a href='#'><span>Brick Squad</span></a></li>
+            </ul>
+        </li>
+        <li class='has-sub'>
+            <a href='#'><span>Leagues</span></a>
+            <ul>
+                <li class='has-sub'>
+                    <a href='#'><span>Basketball</span></a>
+                    <ul>
+                        <li><a href='#'><span>Advanced</span></a></li>
+                        <li class='last'><a href='#'><span>Recreational</span></a></li>
+                    </ul>
+                </li>
+                <li class='last'><a href='#'><span>Flag Football</span></a></li>
+                <li class='has-sub'>
+                    <a href='#'><span>Soccer</span></a>
+                    <ul>
+                        <li><a href='#'><span>Advanced</span></a></li>
+                        <li class='last'><a href='#'><span>Recreational</span></a></li>
+                    </ul>
+                </li>
+                <li class='has-sub'>
+                    <a href='#'><span>Spikeball</span></a>
+                    <ul>
+                        <li><a href='#'><span>Advanced</span></a></li>
+                        <li class='last'><a href='#'><span>Recreational</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href='#'><span>Teams</span></a></li>
+        <li><a href='#'><span>Settings</span></a></li>
+        <li class='last'><a href="mailto:jab83@students.calvin.edu?subject=Website%20Feedback"<span>Contact Us</span></a></li>
+    </ul>
+</div>
+
+    <! -- Add homepage content (schedules, news, pictures, etc) -- >
