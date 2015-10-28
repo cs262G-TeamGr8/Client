@@ -8,7 +8,21 @@
             
 -------------------------------------------------------------------------------------------------*/
 
-var app = angular.module("CalvinIntramurals", ["ui.bootstrap", "ngRoute"])
+var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute"])
     .config(['$controllerProvider', function ($controllerProvider) {
         $controllerProvider.allowGlobals();
-    }]);
+    }])
+    .config(['$routeProvider',
+        function($routeProvider) {
+            $routeProvider.
+                when('/', {
+                    templateUrl: 'views/home.html'
+                    //templateUrl: something.html
+                    //Controller: nameofcontroller
+                });
+        }]);
+
+/*
+    In order to set the url so that the RouteProvider can modify the view template,
+    need to change using $location
+*/
