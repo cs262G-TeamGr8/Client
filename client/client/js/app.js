@@ -14,12 +14,20 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute"])
     }])
     .config(['$routeProvider',
         function($routeProvider) {
-            $routeProvider.
-                when('/', {
-                    templateUrl: 'views/home.html'
-                    //templateUrl: something.html
-                    //Controller: nameofcontroller
-                });
+            $routeProvider
+                .when('/', {
+                    templateUrl: 'views/home.html',
+                    controller: 'HomeController'
+                })
+                .when('/team/:name', {
+                    templateUrl: 'views/team.html',
+                    controller: 'TeamController'
+                })
+                .when('/league/:name', {
+                    templateUrl: 'views/league.html',
+                    controller: 'LeagueController'
+                })
+
         }]);
 
 /*

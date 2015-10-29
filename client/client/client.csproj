@@ -70,6 +70,9 @@
     <Content Include="js\angular-route.min.js" />
     <Content Include="js\angular.min.js" />
     <Content Include="js\app.js" />
+    <Content Include="js\controllers\homeController.js" />
+    <Content Include="js\controllers\leagueController.js" />
+    <Content Include="js\controllers\teamController.js" />
     <Content Include="js\ui-bootstrap-tpls-0.14.3.min.js" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\IntramuralTest.pubxml" />
@@ -90,14 +93,14 @@
     <Content Include="resources\header.png" />
     <Content Include="resources\title-word.png" />
     <Content Include="views\home.html" />
+    <Content Include="views\league.html" />
+    <Content Include="views\team.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="js\controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
