@@ -87,6 +87,7 @@
     <Content Include="index.html" />
     <Content Include="resources\action-pic1.jpg" />
     <Content Include="resources\calvin-knight.png" />
+    <Content Include="resources\header.png" />
     <Content Include="resources\title-word.png" />
     <Content Include="views\home.html" />
     <Content Include="Web.config" />
