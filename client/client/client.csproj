@@ -70,7 +70,9 @@
     <Content Include="js\angular-route.min.js" />
     <Content Include="js\angular.min.js" />
     <Content Include="js\app.js" />
-    <Content Include="js\controllers\app.js" />
+    <Content Include="js\controllers\homeController.js" />
+    <Content Include="js\controllers\leagueController.js" />
+    <Content Include="js\controllers\teamController.js" />
     <Content Include="js\ui-bootstrap-tpls-0.14.3.min.js" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\IntramuralTest.pubxml" />

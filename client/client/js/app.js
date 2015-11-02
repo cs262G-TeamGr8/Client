@@ -13,7 +13,7 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute"])
         $controllerProvider.allowGlobals();
     }])
     .config(['$routeProvider',
-        function($routeProvider) {
+        function ($routeProvider) {
             $routeProvider
                 .when('/', {
                     templateUrl: 'views/home.html',
