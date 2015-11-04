@@ -8,7 +8,7 @@
             
 -------------------------------------------------------------------------------------------------*/
 
-var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute"])
+var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute", "ngAnimate"])
     .config(['$controllerProvider', function ($controllerProvider) {
         $controllerProvider.allowGlobals();
     }])
@@ -16,16 +16,16 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute"])
         function ($routeProvider) {
             $routeProvider
                 .when('/', {
-                    templateUrl: 'views/home.html',
-                    controller: 'HomeController'
+                    templateUrl: 'pages/home/home.html',
+                    controller: 'HomeCtrl'
                 })
                 .when('/team/:name', {
-                    templateUrl: 'views/team.html',
-                    controller: 'TeamController'
+                    templateUrl: 'pages/team/team.html',
+                    controller: 'TeamCtrl'
                 })
                 .when('/league/:name', {
-                    templateUrl: 'views/league.html',
-                    controller: 'LeagueController'
+                    templateUrl: 'pages/league/league.html',
+                    controller: 'LeagueCtrl'
                 })
 
         }]);

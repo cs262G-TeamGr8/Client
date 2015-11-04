@@ -59,3 +59,86 @@ html {
 	opacity: .5;
 	clip: rect(0px,500px,350px,0px);
 }
+
+.plain-text {
+    background-color: transparent;
+}
+
+.app-modal-window .modal-dialog {
+    width: 100%;
+    position: fixed;
+    top: -32px;
+    /*left: -28.25%; /*-20% for mobile*/
+    border-radius: 0;
+}
+
+.login-title {
+    padding: 50px 0 75px 0;
+}
+
+.login-field {
+    width: 80%;
+    height: 85px;
+    font-size: 50px;
+    border-radius: 10px;
+    padding: 0 25px;
+}
+
+.login-btn {
+    width: 80%;
+    height: 85px;
+    font-size: 50px;
+    border-radius: 10px;
+    color: white;
+    background-color: #97252B;
+}
+
+.login-forgot {
+    padding: 20px 0;
+    font-size: 40px;
+}
+
+.input-divider-padding {
+    padding: 45px 0;
+}
+
+.login-divider {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: #A4A4A4;
+}
+
+.signup-link {
+    font-weight: bold;
+    color: #97252B;
+}
+
+.signup-btn {
+    width: 80%;
+    height: 85px;
+    font-size: 50px;
+    border-radius: 10px;
+    border-color: #97252B;
+    color: #97252B;
+    background-color: transparent;
+}
+
+.input-padding {
+    padding: 35px 0;
+}
+
+.page-extender {
+    height: 1200px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.modal-close {
+    font-size: 50px;
+}
