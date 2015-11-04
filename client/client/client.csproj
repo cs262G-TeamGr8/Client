@@ -70,9 +70,13 @@
     <Content Include="js\angular-route.min.js" />
     <Content Include="js\angular.min.js" />
     <Content Include="js\app.js" />
-    <Content Include="js\controllers\homeController.js" />
-    <Content Include="js\controllers\leagueController.js" />
-    <Content Include="js\controllers\teamController.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="modals\login\login.html" />
+    <Content Include="modals\login\login.js" />
+    <Content Include="pages\home\homeController.js" />
+    <Content Include="pages\league\leagueController.js" />
+    <Content Include="pages\team\teamController.js" />
     <Content Include="js\ui-bootstrap-tpls-0.14.3.min.js" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\IntramuralTest.pubxml" />
@@ -92,9 +96,9 @@
     <Content Include="resources\calvin-knight.png" />
     <Content Include="resources\header.png" />
     <Content Include="resources\title-word.png" />
-    <Content Include="views\home.html" />
-    <Content Include="views\league.html" />
-    <Content Include="views\team.html" />
+    <Content Include="pages\home\home.html" />
+    <Content Include="pages\league\league.html" />
+    <Content Include="pages\team\team.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
