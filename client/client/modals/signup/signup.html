@@ -1,6 +1,5 @@
 ﻿<!-- signup.html -->
 <!-- Creates the view for the signup modal -->
-<body ng-controller="LoginCtrl">
     <div class="modal-body">
         <button type="button" class="close" ng-click="cancel()"><span class="modal-close">X</span></button>
         <div class="center-align">
@@ -26,11 +25,17 @@
                 <input class="login-field" type="password" placeholder=" Password (case sensitive)" />
             </div>
             <div class="gender-select">
-                <div class="toggle">
-                    <label><input type="radio" name="toggle"><span>On</span></label>
+                <div class="toggle-btn-grp joint-toggle">
+                    <label ng-click="" class="toggle-btn"><input type="radio" name="gender" ng-model="findGender" value="male" />Male</label>
+                    <label ng-click="" class="toggle-btn"><input type="radio" name="gender" ng-model="findGender" value="female" />Female</label>
                 </div>
-                <div class="toggle">
-                    <label><input type="radio" name="toggle"><span>Off</span></label>
+            </div>
+            <div class="year-select">
+                <div class="toggle-btn-grp2 joint-toggle2">
+                    <label ng-click="" class="year-btn"><input type="radio" name="year" ng-model="findYear" value="fr" />Fr</label>
+                    <label ng-click="" class="year-btn"><input type="radio" name="year" ng-model="findYear" value="so" />So</label>
+                    <label ng-click="" class="year-btn"><input type="radio" name="year" ng-model="findYear" value="jr" />Jr</label>
+                    <label ng-click="" class="year-btn"><input type="radio" name="year" ng-model="findYear" value="sr" />Sr</label>
                 </div>
             </div>
             <div class="input-padding">
@@ -38,5 +43,4 @@
             </div>
             <div class="page-extender"></div>
         </div>
-    </div>
     </div>

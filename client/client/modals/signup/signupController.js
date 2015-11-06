@@ -15,4 +15,12 @@ app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstanc
         $uibModalInstance.dismiss("cancel");
     }
 
+    $scope.$watch('findGender', function (value) {
+        $scope.gender = value;
+    })
+
+    $scope.$watch('findYearGender', function (value) {
+        $scope.year = value;
+    })
+
 }]);

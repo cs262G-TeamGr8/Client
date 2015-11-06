@@ -11,8 +11,12 @@
 var app = angular.module("CalvinIntramuralsApp")
 
 
-app.controller('HomeCtrl', ['$rootScope', '$scope', '$http', function ($rootScope, $scope, $http) {
+app.controller('HomeCtrl', ['$rootScope', '$scope', '$http', '$location', function ($rootScope, $scope, $http, $location) {
 
     $scope.message = 'This is the home page!';
+
+    $scope.teamPage = function () {
+        $location.path('/team/hello')
+    }
 
 }]);
