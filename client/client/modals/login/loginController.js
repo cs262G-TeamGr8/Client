@@ -1,4 +1,4 @@
-﻿/*-------------------------------------------------------------------
+/*-------------------------------------------------------------------
 
     The LoginCtrl provides the login function to the header of 
     pages. The correspoinding .html file specifies the layout
@@ -16,6 +16,12 @@ app.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance
     $scope.cancel = function () {
         $uibModalInstance.dismiss("cancel");
     }
+
+    /*var pageHeight = window.screen.height;
+    alert(pageHeight);
+    var pageExtender = document.querySelector('#page-extender')
+    pageExtender.style.minHeight = pageHeight.toString + 'px';
+    document.getElementById("main-div").style.minHeight = pageHeight.toString + 'px';*/
 
     $scope.forgotPassword = function () {
         var modalInstance = $uibModal.open({
