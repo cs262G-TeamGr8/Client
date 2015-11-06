@@ -129,6 +129,21 @@ html {
     padding: 35px 0;
 }
 
+.login-title-text {
+    font-size: 55px;
+}
+
+.login-info {
+    font-size: 40px;
+    color: #424242;
+    padding: 0 10%;
+}
+
+.login-cancel {
+    color: #424242;
+    font-size: 40px;
+}
+
 .page-extender {
     height: 1200px;
     background-color: transparent;
@@ -141,4 +156,37 @@ html {
 
 .modal-close {
     font-size: 50px;
+}
+
+.gender-select {
+    font-size: 40px;
+    text-align: center;
+}
+
+.toggle {
+    margin:4px;
+    background-color:#EFEFEF;
+    border-radius:4px;
+    border:1px solid #D0D0D0;
+}
+
+.toggle label {
+    width:2.0em;
+}
+
+.toggle label span {
+    text-align:center;
+    padding:3px 0px;
+    display:block;
+    cursor: pointer;
+}
+
+.toggle label input {
+    position:absolute;
+    top:-20px;
+}
+
+.toggle .input-checked /*, .bounds input:checked + span works for firefox and ie9 but breaks js for ie8(ONLY) */ {
+    background-color:red;
+    color:#F7F7F7;
 }
