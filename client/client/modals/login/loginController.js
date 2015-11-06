@@ -17,6 +17,12 @@ app.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance
         $uibModalInstance.dismiss("cancel");
     }
 
+    /*var pageHeight = window.screen.height;
+    alert(pageHeight);
+    var pageExtender = document.querySelector('#page-extender')
+    pageExtender.style.minHeight = pageHeight.toString + 'px';
+    document.getElementById("main-div").style.minHeight = pageHeight.toString + 'px';*/
+
     $scope.forgotPassword = function () {
         var modalInstance = $uibModal.open({
             templateUrl: 'modals/forgotPassword/forgotPassword.html',

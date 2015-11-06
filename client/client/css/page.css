@@ -66,6 +66,7 @@ html {
 
 .app-modal-window .modal-dialog {
     width: 100%;
+    height: 100%;
     position: fixed;
     top: -12px;
     left: -3.5%; /*-20% for mobile*/
@@ -147,9 +148,9 @@ html {
 }
 
 .page-extender {
-    height: 1200px;
+    min-height: 500px;
     background-color: transparent;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .center-align {
