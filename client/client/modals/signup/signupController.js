@@ -1,4 +1,4 @@
-﻿/*-------------------------------------------------------------------
+/*-------------------------------------------------------------------
 
     The SignUpCtrl provides the view for a user to create
     an intramural account in order to join/create a team
@@ -14,5 +14,13 @@ app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstanc
     $scope.cancel = function () {
         $uibModalInstance.dismiss("cancel");
     }
+
+    $scope.$watch('findGender', function (value) {
+        $scope.gender = value;
+    })
+
+    $scope.$watch('findYearGender', function (value) {
+        $scope.year = value;
+    })
 
 }]);
