@@ -1,29 +1,31 @@
 ﻿<!-- login.html -->
 <!-- Creates the view for the login modal -->
-<div class="modal-body">
-    <button type="button" class="close" ng-click="cancel()"><span class="modal-close">X</span></button>
-    <div class="center-align">
-        <div class="login-title">
-            <img src="../../resources/title-word.png" />
+<body ng-controller="LoginCtrl">
+    <div class="modal-body">
+        <button type="button" class="close" ng-click="cancel()"><span class="modal-close">X</span></button>
+        <div class="center-align">
+            <div class="login-title">
+                <img src="../../resources/title-word.png" />
+            </div>
+            <div class="input-padding">
+                <input id="acctEmail" class="login-field" type="email" placeholder=" Email Address" />
+            </div>
+            <div class="input-padding">
+                <input id="acctPassword" class="login-field" type="password" placeholder=" Password (Case Sensitive)" />
+            </div>
+            <div class="input-padding">
+                <button type="button" ng-click="cancel()" class="login-btn">Log In</button>
+            </div>
+            <div class="login-forgot">
+                Forgot your <span class="signup-link" ng-click="forgotPassword()">password?</span>
+            </div>
+            <div class="input-divider-padding">
+                <div class="login-divider"></div>
+            </div>
+            <div class="input-padding">
+                <button type="button" ng-click="signUp()" class="signup-btn">Sign Up</button>
+            </div>
+            <div class="page-extender"></div>
         </div>
-        <div class="input-padding">
-            <input class="login-field" type="email" placeholder=" Email Address" />
-        </div>
-        <div class="input-padding">
-            <input class="login-field" type="password" placeholder=" Password (Case Sensitive)" />
-        </div>
-        <div class="input-padding">
-            <button type="button" ng-click="cancel()" class="login-btn">Log In</button>
-        </div>
-        <div class="login-forgot">
-            Forgot your <span class="signup-link" ng-click="signup()">password?</span>
-        </div>
-        <div class="input-divider-padding">
-            <div class="login-divider"></div>
-        </div>
-        <div class="input-padding">
-            <button type="button" ng-click="cancel()" class="signup-btn">Sign Up</button>
-        </div>
-        <div class="page-extender"></div>
     </div>
 </div>

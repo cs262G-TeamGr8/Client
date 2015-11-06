@@ -1,0 +1,42 @@
+﻿<!-- signup.html -->
+<!-- Creates the view for the signup modal -->
+<body ng-controller="LoginCtrl">
+    <div class="modal-body">
+        <button type="button" class="close" ng-click="cancel()"><span class="modal-close">X</span></button>
+        <div class="center-align">
+            <div class="login-title">
+                <img src="../../resources/title-word.png" />
+            </div>
+            <div class="login-title-text">
+                Create Account
+            </div>
+            <div class="input-divider-padding">
+                <div class="login-divider"></div>
+            </div>
+            <div class="input-padding">
+                <input class="login-field" type="text" placeholder=" First Name" />
+            </div>
+            <div class="input-padding">
+                <input class="login-field" type="text" placeholder=" Last Name" />
+            </div>
+            <div class="input-padding">
+                <input class="login-field" type="email" placeholder=" Email Address" />
+            </div>
+            <div class="input-padding">
+                <input class="login-field" type="password" placeholder=" Password (case sensitive)" />
+            </div>
+            <div class="gender-select">
+                <div class="toggle">
+                    <label><input type="radio" name="toggle"><span>On</span></label>
+                </div>
+                <div class="toggle">
+                    <label><input type="radio" name="toggle"><span>Off</span></label>
+                </div>
+            </div>
+            <div class="input-padding">
+                <button type="button" ng-click="cancel()" class="login-btn">Sign Up</button>
+            </div>
+            <div class="page-extender"></div>
+        </div>
+    </div>
+    </div>

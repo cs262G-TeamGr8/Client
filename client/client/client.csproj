@@ -72,8 +72,12 @@
     <Content Include="js\app.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="modals\forgotPassword\forgotPassword.html" />
+    <Content Include="modals\forgotPassword\forgotPasswordController.js" />
     <Content Include="modals\login\login.html" />
-    <Content Include="modals\login\login.js" />
+    <Content Include="modals\login\loginController.js" />
+    <Content Include="modals\signup\signup.html" />
+    <Content Include="modals\signup\signupController.js" />
     <Content Include="pages\home\homeController.js" />
     <Content Include="pages\league\leagueController.js" />
     <Content Include="pages\team\teamController.js" />
