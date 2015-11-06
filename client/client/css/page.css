@@ -66,6 +66,7 @@ html {
 
 .app-modal-window .modal-dialog {
     width: 100%;
+    height: 100%;
     position: fixed;
     top: -12px;
     left: -3.5%; /*-20% for mobile*/
@@ -147,9 +148,9 @@ html {
 }
 
 .page-extender {
-    height: 1200px;
+    min-height: 500px;
     background-color: transparent;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .center-align {
@@ -165,30 +166,74 @@ html {
     text-align: center;
 }
 
-.toggle {
-    margin:4px;
-    background-color:#EFEFEF;
-    border-radius:2px;
-    border:1px solid #D0D0D0;
+.toggle-btn-grp { 
+    margin:3px 0; 
+}
+.toggle-btn { 
+    text-align:center; 
+    padding: 8px 10px 0 0; 
+    color:#000; 
+    background-color:#FFF; 
+    border-radius:2px; 
+    display:inline-block; 
+    border:solid 1px #CCC; 
+    cursor:pointer;
+    font-weight: 100;
 }
 
-.toggle label {
-    width:20px;
+.year-btn {
+    text-align:center; 
+    padding: 2px 5px 0 0; 
+    color:#000; 
+    background-color:#FFF; 
+    border-radius:2px; 
+    display:inline-block; 
+    border:solid 1px #CCC; 
+    cursor:pointer;
+    font-weight: 100;
+    width: 20%;
 }
 
-.toggle label span {
-    text-align:center;
-    padding:3px 0px;
-    display:block;
-    cursor: pointer;
+.year-btn:hover { 
+    border:solid 1px #a0d5dc !important; 
+    background:#f1fdfe;
 }
 
-.toggle label input {
-    position:absolute;
-    top:-20px;
+.year-btn.success { 
+    background:lightgreen;
+    border:solid 1px green !important; 
 }
 
-.toggle .input-checked /*, .bounds input:checked + span works for firefox and ie9 but breaks js for ie8(ONLY) */ {
-    background-color:red;
-    color:#F7F7F7;
+
+.toggle-btn-grp.joint-toggle .toggle-btn { 
+    border-radius:0;
+    border-color: #BDBDBD;
+}
+.toggle-btn-grp.joint-toggle .toggle-btn:first-child { 
+    margin-left:2px;
+    width: 40%; 
+    height: 40px;
+    border-radius: 2px 0px 0px 2px; 
+}
+.toggle-btn-grp.joint-toggle .toggle-btn:last-child { 
+    margin-right:2px;  
+    width: 40%;
+    height: 40px;
+    border-radius: 0px 2px 2px 0px;
+}
+
+
+.toggle-btn:hover { 
+    border:solid 1px #a0d5dc !important; 
+    background:#f1fdfe;
+}
+
+
+.toggle-btn.success { 
+    background:lightgreen;
+    border:solid 1px green !important; 
+}
+
+input[type="radio"]:checked, input[type="radio"]:not(:checked) {
+    visibility: hidden;
 }
