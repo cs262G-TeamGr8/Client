@@ -102,22 +102,14 @@
                     <!-- Optionally, you can add icons to the links -->
                     <li class="treeview">
                         <a href="#"><i class="fa fa-group"></i> <span>My Team</span> <i class="fa fa-angle-left pull-right"></i></a>
-                        <ul class="treeview-menu">
-                            <li><a href="#">Yellow Vitamin Water</a></li>
-                            <li><a href="#">Goal Diggers</a></li>
+                        <ul class="treeview-menu" ng-repeat="team in teamList">
+                            <li><a href="#{{team.route}}">{{team.name}}</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
                         <a href="#"><i class="fa fa-rocket"></i> <span>Leagues</span> <i class="fa fa-angle-left pull-right"></i></a>
-                        <ul class="treeview-menu">
-                            <li><a href="#">Basketball</a></li>
-                            <li><a href="#">Soccer</a></li>
-                            <li><a href="#">Flag Football</a></li>
-                            <li><a href="#">Volleyball</a></li>
-                            <li><a href="#">Ping Pong</a></li>
-                            <li><a href="#">Dodgeball</a></li>
-                            <li><a href="#">Floor Hockey</a></li>
-                            <li><a href="#">Whiffle Ball</a></li>
+                        <ul class="treeview-menu" ng-repeat="league in leagueList">
+                            <li><a href="#{{league.route}}">{{league.name}}</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
