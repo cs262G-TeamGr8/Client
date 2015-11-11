@@ -27,6 +27,10 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute", "ng
                     templateUrl: 'pages/league/league.html',
                     controller: 'LeagueCtrl'
                 })
+                .when('/login', {
+                    templateUrl: 'modals/login/login.html',
+                    controller: 'LoginCtrl'
+                })
 
         }]);
 

@@ -68,12 +68,13 @@
   <ItemGroup>
     <Content Include="css\template.min.css" />
     <Content Include="css\skin-red-light.min.css" />
-    <Content Include="js\angular-animate.min.js" />
-    <Content Include="js\angular-route.min.js" />
-    <Content Include="js\angular.min.js" />
+    <Content Include="js\includes\angular-animate.min.js" />
+    <Content Include="js\includes\angular-route.min.js" />
+    <Content Include="js\includes\angular.min.js" />
     <Content Include="js\app.js" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="js\includes\bootstrap.min.js" />
+    <Content Include="js\includes\jquery-1.11.3.min.js" />
+    <Content Include="js\mainController.js" />
     <Content Include="js\template.js" />
     <Content Include="modals\forgotPassword\forgotPassword.html" />
     <Content Include="modals\forgotPassword\forgotPasswordController.js" />
@@ -84,7 +85,7 @@
     <Content Include="pages\home\homeController.js" />
     <Content Include="pages\league\leagueController.js" />
     <Content Include="pages\team\teamController.js" />
-    <Content Include="js\ui-bootstrap-tpls-0.14.3.min.js" />
+    <Content Include="js\includes\ui-bootstrap-tpls-0.14.3.min.js" />
     <Content Include="packages.config" />
     <Content Include="css\less\404_500_errors.less" />
     <Content Include="css\less\AdminLTE.less" />
