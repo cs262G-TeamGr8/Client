@@ -15,8 +15,6 @@ app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$u
 
     $scope.message = $routeParams.name;
 
-    alert("worked");
-
     $scope.openLoginModal = function () {
         var modalInstance = $uibModal.open({
             templateUrl: 'modals/login/login.html',
