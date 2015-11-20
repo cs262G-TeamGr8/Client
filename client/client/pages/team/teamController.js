@@ -15,20 +15,4 @@ app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$u
 
     $scope.message = $routeParams.name;
 
-    $scope.openLoginModal = function () {
-        var modalInstance = $uibModal.open({
-            templateUrl: 'modals/login/login.html',
-            controller: 'LoginCtrl',
-            animation: false,
-            windowClass: 'app-modal-window'
-        });
-
-        modalInstance.result.then(function () {
-            //runs in here if something passed back in close()
-        }, function () {
-            //runs if modal is dismissed
-            console.log("Results dismissed at: " + new Date());
-        });
-    }
-
 }]);
