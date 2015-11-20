@@ -34,6 +34,12 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute", "ng
 
         }]);
 
+app.run(function ($rootScope) {
+    var liveApi = "http://intramuralsapi.azurewebsites.net/api/";
+    //change testApi to liveApi for public
+    $rootScope.apiScope = liveApi;
+});
+
 /*
     In order to set the url so that the RouteProvider can modify the view template,
     need to change using $location
