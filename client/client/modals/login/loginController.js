@@ -66,10 +66,11 @@ app.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance
 
         $http.get(url).success(function (result) {
             var loginInfo = JSON.parse(result);
+            var name = loginInfo[0].name.split(" ")[0]
 
             if (loginInfo[0].loggedIn) {
                 $rootScope.loggedInName = loginInfo[0].name;
-                $rootScope.loginBtn = "Hi, " + loginInfo[0].name;
+                $rootScope.loginBtn = "Hi, " + name;
                 $log.info(loginInfo[0].message);
                 $uibModalInstance.dismiss("cancel");
             }
