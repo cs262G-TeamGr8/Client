@@ -11,7 +11,7 @@
 var app = angular.module("CalvinIntramuralsApp")
 
 
-app.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance', '$uibModal', function ($rootScope, $scope, $http, $uibModalInstance, $uibModal) {
+app.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance', '$uibModal', '$log', function ($rootScope, $scope, $http, $uibModalInstance, $uibModal, $log) {
 
     $scope.cancel = function () {
         $uibModalInstance.dismiss("cancel");
@@ -56,5 +56,43 @@ app.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance
         });
 
         $uibModalInstance.dismiss("cancel")
+    }
+
+    $scope.login = function () {
+        var email = document.getElementById("acctEmail").value;
+        var password = document.getElementById("acctPassword").value;
+        var url = "user/login?email=" + email + "&password=" + password;
+        url = $rootScope.apiScope + url;
+
+        $http.get(url).success(function (result) {
+            var loginInfo = JSON.parse(result);
+
+            if (loginInfo.loggedIn) {
+                $rootScope.loggedInName = loginInfo.name;
+                $rootScope.loginBtn = "Hi, " + loginInfo.name;
+                $log.info(loginInfo.message);
+                $uibModalInstance.dismiss("cancel");
+            }
+            else {
+                if (typeof loginInfo.email !== null) {
+                    email = document.getElementById("acctEmail").value;
+                    email = loginInfo.email;
+                    password = document.getElementById("acctPassword").value;
+                    password = "";
+                    alert("Incorrect password");
+                }
+                else {
+                    email = document.getElementById("acctEmail").value;
+                    email = "";
+                    password = document.getElementById("acctPassword").value;
+                    password = "";
+                    alert("Email account not found");
+                }
+            }
+        })
+        .error(function (data, status, headers, config) {
+            $log.info("Player login failure");
+         });
+      
     }
 }]);

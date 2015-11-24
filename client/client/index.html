@@ -75,7 +75,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" ng-click="openLoginModal()">
                                 <!-- The user image in the navbar-->
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                <i class="fa fa-lock"></i><span>Login</span>
+                                <i class="fa fa-lock"></i><span>{{loginBtn}}</span>
                             </a>
                         </li>
                     </ul>
@@ -92,7 +92,7 @@
                         <img src="http://gurucul.com/wp-content/uploads/2015/01/default-user-icon-profile.png" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p>Eunsung Kim</p>
+                        <p>{{loggedInName}}</p>
                     </div>
                 </div>
 

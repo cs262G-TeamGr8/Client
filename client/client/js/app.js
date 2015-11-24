@@ -38,6 +38,9 @@ app.run(function ($rootScope) {
     var liveApi = "http://intramuralsapi.azurewebsites.net/api/";
     //change testApi to liveApi for public
     $rootScope.apiScope = liveApi;
+    $rootScope.loggedIn = false;
+    $rootScope.loggedInName = "Guest";
+    $rootScope.loginBtn = "Login";
 });
 
 /*
