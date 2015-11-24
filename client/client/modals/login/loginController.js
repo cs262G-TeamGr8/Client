@@ -67,16 +67,16 @@ app.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance
         $http.get(url).success(function (result) {
             var loginInfo = JSON.parse(result);
 
-            if (loginInfo.loggedIn) {
-                $rootScope.loggedInName = loginInfo.name;
-                $rootScope.loginBtn = "Hi, " + loginInfo.name;
-                $log.info(loginInfo.message);
+            if (loginInfo[0].loggedIn) {
+                $rootScope.loggedInName = loginInfo[0].name;
+                $rootScope.loginBtn = "Hi, " + loginInfo[0].name;
+                $log.info(loginInfo[0].message);
                 $uibModalInstance.dismiss("cancel");
             }
             else {
-                if (typeof loginInfo.email !== null) {
+                if (typeof loginInfo[0].email !== null) {
                     email = document.getElementById("acctEmail").value;
-                    email = loginInfo.email;
+                    email = loginInfo[0].email;
                     password = document.getElementById("acctPassword").value;
                     password = "";
                     alert("Incorrect password");
