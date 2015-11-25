@@ -12,7 +12,7 @@
 var app = angular.module("CalvinIntramuralsApp")
 
 app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$uibModal', function ($rootScope, $scope, $http, $routeParams, $uibModal) {
-
     $scope.message = $routeParams.name;
-
+    $http.get($rootScope.apiScope + "team/schedule/" + $routeParams.name)
+    .success(function (data) { $scope.schedule = JSON.parse(data); });
 }]);
