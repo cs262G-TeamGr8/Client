@@ -9,62 +9,26 @@
     </div>
     <p>  Welcome to your team page.</p>
     <div class="box-body">
-        <h2>Roster</h2>
+        <h2>Schedule</h2>
         <table class="table table-bordered">
             <tr>
-                <th style="width:10px">#</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th style="width:40px">Email</th>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Date</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Reggie Jackson</td>
-                <td>PG/SG</td>
-                <td>rsj1r@students.calvine.edu</td>
+            <tr ng-repeat="x in schedule">
+                <td>{{ x.home }}</td>
+                <td>{{ x.away }}</td>
+                <td>{{ x.date | date:"MM/dd/yyyy 'at' h:mma" }}</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Kawhi Leonard</td>
-                <td>SG/SF</td>
-                <td>kal2k@students.calvin.edu</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Carmelo Anthony</td>
-                <td>SF/PF</td>
-                <td>cka7c@students.calvin.edu</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>James Harden</td>
-                <td>SG/SF</td>
-                <td>jeh13j@students.calvin.edu</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>Demarcus Cousins</td>
-                <td>PF/C</td>
-                <td>dac13d@students.calvin.edu</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Anthony Davis</td>
-                <td>PF/C</td>
-                <td>amd23a@students.calvin.edu</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Stephen Curry</td>
-                <td>PG/SG</td>
-                <td>wsc30w@students.calvin.edu</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>Blake Griffin</td>
-                <td>PF/C</td>
-                <td>bag32b@students.calvin.edu</td>
-            </tr>
+                      
         </table>
     </div>
+
+        <ul>
+            <li ng-repeat="x in schedule">
+                {{ x.home }} plays on {{ x.date | date:"MM/dd/yyyy 'at' h:mma"}} vs. {{ x.away}}
+            </li>
+        </ul>
+
 </div>

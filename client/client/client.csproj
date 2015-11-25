@@ -93,6 +93,7 @@
     <Content Include="css\less\sidebar.less" />
     <Content Include="css\less\skin-red-light.less" />
     <None Include="Properties\PublishProfiles\IntramuralTest.pubxml" />
+    <None Include="Properties\PublishProfiles\manji.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
