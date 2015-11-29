@@ -39,7 +39,7 @@ app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstanc
 
         var url = "user/new";
         url = $rootScope.apiScope + url;
-        $http.post(url, JSON.stringify(account)).success(function (result) {
+        $http.post(url, { '': JSON.stringify(account) }).success(function (result) {
             alert(result)
         })
         .error(function (data, status, headers, config) {
