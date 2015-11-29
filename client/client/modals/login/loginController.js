@@ -68,6 +68,7 @@ app.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance
             var loginInfo = JSON.parse(result);
 
             if (loginInfo[0].loggedIn) {
+                $rootScope.loggedIn = true;
                 $rootScope.loggedInName = loginInfo[0].name;
                 var name = loginInfo[0].name.split(" ")[0]
                 $rootScope.loginBtn = "Hi, " + name;
