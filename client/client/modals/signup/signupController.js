@@ -26,21 +26,20 @@ app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstanc
 
     $scope.signup = function () {
 
-        var fname = document.getElementById("fname").value;
-        var lname = document.getElementById("lname").value;
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("password").value;
-
         var account = {
-            Username: fname + " " + lname,
-            Password: password,
-            Email: email
+            Username: document.getElementById("fname").value + " " + document.getElementById("lname").value,
+            Password: document.getElementById("password").value,
+            Email: document.getElementById("email").value
         }
 
         var url = "user/new";
         url = $rootScope.apiScope + url;
         $http.post(url, JSON.stringify(account)).success(function (result) {
-            alert(result)
+            $rootScope.loggedIn = true;
+            $rootScope.loggedInName = result;
+            var name = result.split(" ")[0];
+            $rootScope.loginBtn = "Hi, " + name;
+            $uibModalInstance.dismiss("cancel");
         })
         .error(function (data, status, headers, config) {
             alert("Create User did not work, please try again");
