@@ -31,9 +31,15 @@ app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstanc
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
 
-        var url = "user/new?name=" + fname + " " + lname + "&password=" + password + "&email=" + email;
+        var account = {
+            Username: fname + " " + lname,
+            Password: password,
+            Email: email
+        }
+
+        var url = "user/new";
         url = $rootScope.apiScope + url;
-        $http.get(url).success(function (result) {
+        $http.post(url, JSON.stringify(account)).success(function (result) {
             alert(result)
         })
         .error(function (data, status, headers, config) {
