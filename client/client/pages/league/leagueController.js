@@ -14,5 +14,6 @@ var app = angular.module("CalvinIntramuralsApp")
 app.controller('LeagueCtrl', ['$rootScope', '$scope', '$http', '$routeParams', function ($rootScope, $scope, $http, $routeParams) {
 
     $scope.message = $routeParams.name;
-
+    $http.get($rootScope.apiScope + "league/teams/" + $routeParams.name)
+    .success(function (data) { $scope.standings = JSON.parse(data); });
 }]);

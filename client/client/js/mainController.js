@@ -15,12 +15,12 @@ app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', functi
 
     $scope.teamList = [
         { name: 'Yellow Vitamin Water', route: '/team/Yellow Vitamin Water' },
-        { name: 'Goal Diggers', route: '/team/Goal Diggers' }
+        { name: 'Goal Diggers', route: '/team/Goal Diggers' },
+        { name: 'Killer Sonics', route: '/team/Killer Sonics' }
     ]
 
     $scope.leagueList = [
-    { name: 'Basketball Adv', route: '/league/Basketball Adv' },
-    { name: 'Basketball Rec', route: '/league/Basketball Rec' },
+    { name: 'Basketball', route: '/league/Basketball' },
     { name: 'Ping Pong', route: '/league/Ping Pong' },
     { name: 'Soccer', route: '/league/Soccer' },
     { name: 'Flag Football', route: '/league/Flag Football' },
