@@ -1,126 +1,30 @@
 ﻿<!-- league.html -->
 <!-- Displays information regarding specific league -->
-<!DOCTYPE html>
-<html>
-<head>
-	<style>
-	table, td, th {
-		border: 1px solid green;
-		background: linear-gradient( to bottom, #F9FB8D, #F3CD00);
-		color: maroon;
-	}
-	</style>
-</head>
+<div class="box box-solid box-primary">
+    <div class="box-header with-border">
+        <h1>
+            {{message}}
+        </h1>
+    </div>
+    <p>  Welcome to your team page.</p>
+    <div class="box-body">
+        <h2>Standings</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>Team</th>
+                <th>Wins</th>
+                <th>Losses</th>
+            </tr>
+            <tr ng-repeat="x in standings">
+                <td>{{ x.name }}</td>
+                <td>{{ x.wins }}</td>
+                <td>{{ x.losses }}</td>
+            </tr>
 
-<div align="center">
-<div>
-	<table border="1" cellpadding="2" cellspacing="1">
-		<tr align="center" valign="middle" style="font-size:130%"><th><strong>Sport</strong></th><th><strong>Start Date</strong></th><th><strong>End Date</strong></th></tr>
-		<td height="25" width="25%">
-			<p align="center"><strong><a href="https://www.calvin.edu/directory/policies/outdoor-soccer-intramural">Soccer</a></strong></p>
-		</td>
-		<td height="25" width="25%">
-			<p align="center"><strong>Friday, 11/6/2015</strong></p>
-		</td>
-		<td height="25" width="25%">
-			<p align="center"><strong>Friday, 12/18/2015</strong></p>
-		</td>
-	</tr>
+        </table>
+    </div>
 
-	<tr align="center">
-		<td height="25" width="25%">
-			<p align="center"><strong><a href="https://www.calvin.edu/directory/policies/basketball-intramural-5-vs-5">Basketball 5v5</a></strong></p>
-		</td>
-		<td height="25" width="25%">
-			<p align="center"><strong>Friday, 11/6/2015</strong></p>
-		</td>
-		<td height="25" width="25%">
-			<p align="center"><strong>Friday, 12/18/2015</strong></p>
-	</tr>
-
-	<tr align="center">
-		<td height="25" width="25%">
-			<p align="center"><strong><a href="https://www.calvin.edu/directory/policies/volleyball-intramural-coed">Volleyball</a></strong></p>
-		</td>
-		<td height="25" width="25%">
-			<p align="center"><strong>Friday, 11/6/2015</strong></p>
-		</td>
-		<td height="25" width="25%">
-			<p align="center"><strong>Friday, 12/18/2015</strong></p>
-	</tr>
-
-	<tr align="center">
-		<td height="25" width="25%">
-			<p align="center"><strong><a href="https://www.calvin.edu/directory/policies/dodgeball-intramural">Dodgeball</a></strong></p>
-		</td>
-		<td height="25" width="25%">
-			<p align="center"><strong>Friday, 11/6/2015</strong></p>
-		</td>
-		<td height="25" width="25%">
-			<p align="center"><strong>Friday, 12/18/2015</strong></p>
-	</tr>
-
-	<tr align="center">
-		<td height="25" width="25%">
-			<p align="center"><strong><a href="https://www.calvin.edu/directory/policies/ping-pong-intramural">Ping Pong</a></strong></p>
-		</td>
-		<td height="25" width="25%">
-			<p align="center"><strong>Friday, 11/6/2015</strong></p>
-		</td>
-		<td height="25" width="25%">
-			<p align="center"><strong>Friday, 12/18/2015</strong></p>
-		</tr>
-	</table>
 </div>
-
-<div>
-	<p>Upcoming games in {{message}}:</p>
-	<table border="1" cellpadding="2" cellspacing="1">
-		<tr align="center" valign="middle" style="font-size:130%"><th><strong>Team</strong></th><th><strong>Versus</strong></th><th><strong>Date</strong></th><th><strong>Time</strong></th></tr>
-		<tr align="center">
-			<td height="25" width="25%">
-				<p align="center"><strong>Team A</a></strong></p>
-			</td>
-			<td height="25" width="25%">
-				<p align="center"><strong>Team B</a></strong></p>
-			</td>
-			<td height="25" width="25%">
-				<p align="center"><strong>Friday, 11/6/2015</strong></p>
-			</td>
-			<td height="25" width="25%">
-				<p align="center"><strong>7 P.M.</strong></p>
-		</tr>
-		<tr align="center">
-			<td height="25" width="25%">
-				<p align="center"><strong>Team A</a></strong></p>
-			</td>
-			<td height="25" width="25%">
-				<p align="center"><strong>Team C</a></strong></p>
-			</td>
-			<td height="25" width="25%">
-				<p align="center"><strong>Saturday, 11/7/2015</strong></p>
-			</td>
-			<td height="25" width="25%">
-				<p align="center"><strong>7 P.M.</strong></p>
-		</tr>
-
-		<tr align="center">
-			<td height="25" width="25%">
-				<p align="center"><strong>Team B</a></strong></p>
-			</td>
-			<td height="25" width="25%">
-				<p align="center"><strong>Team C</a></strong></p>
-			</td>
-			<td height="25" width="25%">
-				<p align="center"><strong>Saturday, 11/7/2015</strong></p>
-			</td>
-			<td height="25" width="25%">
-				<p align="center"><strong>9 P.M.</strong></p>
-		</tr>
-	</table>
-</div>
-</div>
-</html>
 
 <! -- Add homepage content (schedules, news, pictures, etc) -- >
 
