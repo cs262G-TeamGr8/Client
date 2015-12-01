@@ -15,7 +15,6 @@ app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', functi
 
     $scope.teamList = [
         { name: 'Yellow Vitamin Water', route: '/team/Yellow Vitamin Water' },
-        { name: 'Goal Diggers', route: '/team/Goal Diggers' },
         { name: 'Killer Sonics', route: '/team/Killer Sonics' }
     ]
 

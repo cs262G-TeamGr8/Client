@@ -7,7 +7,7 @@
             {{message}}
         </h1>
     </div>
-    <p>  Welcome to your team page.</p>
+
     <div class="box-body">
         <h2>Schedule</h2>
         <table class="table table-bordered">
@@ -16,7 +16,7 @@
                 <th>Away Team</th>
                 <th>Date</th>
             </tr>
-            <tr ng-repeat="x in schedule">
+            <tr ng-repeat="x in schedule | orderBy: 'date'">
                 <td>{{ x.home }}</td>
                 <td>{{ x.away }}</td>
                 <td>{{ x.date | date:"MM/dd/yyyy 'at' h:mma" }}</td>
@@ -24,11 +24,5 @@
                       
         </table>
     </div>
-
-        <ul>
-            <li ng-repeat="x in schedule">
-                {{ x.home }} plays on {{ x.date | date:"MM/dd/yyyy 'at' h:mma"}} vs. {{ x.away}}
-            </li>
-        </ul>
 
 </div>
