@@ -34,7 +34,7 @@
                 <th>Away Team</th>
                 <th>Date</th>
             </tr>
-            <tr ng-repeat="x in schedule | orderBy: 'date'">
+            <tr ng-repeat="x in schedule | myFilter:14">
                 <td>{{ x.home }}</td>
                 <td>{{ x.away }}</td>
                 <td>{{ x.date | date:"MM/dd/yyyy 'at' h:mma" }}</td>
