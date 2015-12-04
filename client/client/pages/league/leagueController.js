@@ -20,3 +20,14 @@ app.controller('LeagueCtrl', ['$rootScope', '$scope', '$http', '$routeParams', f
     $http.get($rootScope.apiScope + "league/schedule/" + $routeParams.name)
     .success(function (data) { $scope.schedule = JSON.parse(data); });
 }]);
+
+app.filter("myFilter", function () {
+    return function (items, days) {
+        var currDate = Date.now();
+        var endDate = currDate - (days * 86400000); // 1 day in ms
+        return items.filter(function (item) {
+            return (item.date > endDate);
+        });
+
+    };
+});
