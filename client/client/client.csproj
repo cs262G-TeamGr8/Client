@@ -82,7 +82,11 @@
     <Content Include="modals\login\loginController.js" />
     <Content Include="modals\signup\signup.html" />
     <Content Include="modals\signup\signupController.js" />
+    <Content Include="pages\create_team\create_team.html" />
+    <Content Include="pages\create_team\create_teamController.js" />
     <Content Include="pages\home\homeController.js" />
+    <Content Include="pages\join_team\join_team.html" />
+    <Content Include="pages\join_team\join_teamController.js" />
     <Content Include="pages\league\leagueController.js" />
     <Content Include="pages\team\teamController.js" />
     <Content Include="js\includes\ui-bootstrap-tpls-0.14.3.min.js" />
@@ -112,6 +116,7 @@
     <Content Include="pages\home\home.html" />
     <Content Include="pages\league\league.html" />
     <Content Include="pages\team\team.html" />
+    <Content Include="resources\user_icon.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

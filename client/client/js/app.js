@@ -12,38 +12,49 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute", "ng
     .config(['$controllerProvider', function ($controllerProvider) {
         $controllerProvider.allowGlobals();
     }])
+
+    // configure the routes for sidebar menu options
     .config(['$routeProvider',
         function ($routeProvider) {
             $routeProvider
+
+                // Home Page
                 .when('/', {
                     templateUrl: 'pages/home/home.html',
                     controller: 'HomeCtrl'
                 })
+
+                // Specific Team Page
                 .when('/team/:name', {
                     templateUrl: 'pages/team/team.html',
                     controller: 'TeamCtrl'
                 })
+
+                // Specific League Page
                 .when('/league/:name', {
                     templateUrl: 'pages/league/league.html',
                     controller: 'LeagueCtrl'
                 })
-                .when('/login', {
-                    templateUrl: 'modals/login/login.html',
-                    controller: 'LoginCtrl'
+
+                // Create a Team Page
+                .when('/create', {
+                    templateUrl: 'pages/create_team/create_team.html',
+                    controller: 'CreateTeamCtrl'
+                })
+
+                // Join a Team Page
+                .when('/join', {
+                    templateUrl: 'pages/join_team/join_team.html',
+                    controller: 'JoinTeamCtrl'
                 })
 
         }]);
 
+// default setup when app runs
 app.run(function ($rootScope) {
     var liveApi = "http://intramuralsapi.azurewebsites.net/api/";
-    //change testApi to liveApi for public
     $rootScope.apiScope = liveApi;
     $rootScope.loggedIn = false;
     $rootScope.loggedInName = "Guest";
     $rootScope.loginBtn = "Login";
 });
-
-/*
-    In order to set the url so that the RouteProvider can modify the view template,
-    need to change using $location
-*/
