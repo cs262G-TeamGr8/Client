@@ -13,6 +13,10 @@ var app = angular.module("CalvinIntramuralsApp")
 
 app.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance', '$uibModal', '$log', function ($rootScope, $scope, $http, $uibModalInstance, $uibModal, $log) {
 
+    if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
+        $("body").removeClass('sidebar-open');
+    }
+
     $scope.cancel = function () {
         $uibModalInstance.dismiss("cancel");
     }

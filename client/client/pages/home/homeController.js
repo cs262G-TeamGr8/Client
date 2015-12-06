@@ -13,6 +13,10 @@ var app = angular.module("CalvinIntramuralsApp")
 
 app.controller('HomeCtrl', ['$rootScope', '$scope', '$http', function ($rootScope, $scope, $http) {
 
+    if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
+        $("body").removeClass('sidebar-open');
+    }
+
     $scope.message = 'This is the home page!';
 
 }]);

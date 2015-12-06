@@ -12,6 +12,11 @@
 var app = angular.module("CalvinIntramuralsApp")
 
 app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$uibModal', function ($rootScope, $scope, $http, $routeParams, $uibModal) {
+
+    if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
+        $("body").removeClass('sidebar-open');
+    }
+
     $scope.message = $routeParams.name;
     $http.get($rootScope.apiScope + "team/schedule/" + $routeParams.name)
     .success(function (data) { $scope.schedule = JSON.parse(data); });
