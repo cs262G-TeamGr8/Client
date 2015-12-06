@@ -18,14 +18,14 @@ app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$comp
      * list of teams from database and add to list. If user is not logged in, add default
      * list message option.
      */
-    $rootScope.$watch($rootScope.loggedIn, function () {
+    $rootScope.$watch(function () { return $rootScope.loggedIn; }, function () {
         $("#myTeams").empty();
 
         // user is logged in
         if ($rootScope.loggedIn) {
-            $http.get($rootScope.apiScope + "league/leagues/late fall").success(function (result) {
+            $http.get($rootScope.apiScope + "user/teams/" + $rootScope.loggedInName).success(function (result) {
                 var teamList = JSON.parse(result);
-                for (var i = 0; i < $scope.teamList.length; i++) {
+                for (var i = 0; i < teamList.length; i++) {
                     var teamName = teamList[i]["name"]
 
                     // user JQuery to append team list to sidebar menu

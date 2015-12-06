@@ -13,6 +13,10 @@ var app = angular.module("CalvinIntramuralsApp")
 
 app.controller('LeagueCtrl', ['$rootScope', '$scope', '$http', '$routeParams', function ($rootScope, $scope, $http, $routeParams) {
 
+    if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
+        $("body").removeClass('sidebar-open');
+    }
+
     $scope.message = $routeParams.name;
     $http.get($rootScope.apiScope + "league/teams/" + $routeParams.name)
     .success(function (data) { $scope.standings = JSON.parse(data); });
