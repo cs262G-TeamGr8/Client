@@ -77,7 +77,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" ng-click="openLoginModal()">
                                 <!-- The user image in the navbar-->
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                                <span><img src="resources/user_icon.png" class="img-circle" style="background-color:white;" width="17px" height="17px" />{{loginBtn}}</span>
+                                <span><img src="resources/user_icon.png" class="img-circle" style="background-color:white;" width="17px" height="17px" />{{loggedIn.btn}}</span>
                             </a>
                         </li>
                     </ul>
@@ -94,7 +94,7 @@
                         <img src="http://gurucul.com/wp-content/uploads/2015/01/default-user-icon-profile.png" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p>{{loggedInName}}</p>
+                        <p>{{loggedIn.username}}</p>
                     </div>
                 </div>
 
@@ -131,11 +131,11 @@
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <div ng-view></div>
             </section>
             <!-- Main content -->
             <section class="content">
                 <!-- Your Page Content Here -->
+                <div ng-view></div>
             </section>
             <!-- /.content -->
         </div>
