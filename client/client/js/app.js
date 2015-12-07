@@ -54,7 +54,11 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute", "ng
 app.run(function ($rootScope) {
     var liveApi = "http://intramuralsapi.azurewebsites.net/api/";
     $rootScope.apiScope = liveApi;
-    $rootScope.loggedIn = false;
-    $rootScope.loggedInName = "Guest";
-    $rootScope.loginBtn = "Login";
+    $rootScope.loggedIn = {
+        "value": false,
+        "username": 'Guest',
+        "id": -1,
+        "email":'',
+        "btn": 'Login'
+    }
 });

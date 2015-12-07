@@ -72,10 +72,12 @@ app.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance
             var loginInfo = JSON.parse(result);
 
             if (loginInfo[0].loggedIn) {
-                $rootScope.loggedIn = true;
-                $rootScope.loggedInName = loginInfo[0].name;
+                $rootScope.loggedIn.value = true;
+                $rootScope.loggedIn.username = loginInfo[0].name;
                 var name = loginInfo[0].name.split(" ")[0]
-                $rootScope.loginBtn = "Hi, " + name;
+                $rootScope.loggedIn.btn = "Hi, " + name;
+                $rootScope.loggedIn.id = loginInfo[0].id;
+                $rootScope.loggedIn.email = loginInfo[0].email;
                 $log.info(loginInfo[0].message);
                 $uibModalInstance.dismiss("cancel");
             }

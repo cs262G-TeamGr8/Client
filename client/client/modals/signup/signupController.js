@@ -35,10 +35,10 @@ app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstanc
         var url = "user/new";
         url = $rootScope.apiScope + url;
         $http.post(url, JSON.stringify(account)).success(function (result) {
-            $rootScope.loggedIn = true;
-            $rootScope.loggedInName = result;
+            $rootScope.loggedIn.value = true;
+            $rootScope.loggedIn.username = result;
             var name = result.split(" ")[0];
-            $rootScope.loginBtn = "Hi, " + name;
+            $rootScope.loggedIn.btn = "Hi, " + name;
             $uibModalInstance.dismiss("cancel");
         })
         .error(function (data, status, headers, config) {
