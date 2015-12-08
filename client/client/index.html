@@ -111,10 +111,10 @@
                         <ul id="leagues" class="treeview-menu"></ul>
                     </li>
                     <li class="treeview">
-                        <a href="#/join"><i class="fa fa-plus"></i> <span>Join a Team</span></a>
+                        <a href="#/join"><i class="fa fa-plus"></i> <span>Join a Team</span> <i class="fa fa-lock pull-right" ng-if="loggedIn.value == false"></i></a>
                     </li>
                     <li class="treeview">
-                        <a href="#/create"><i class="icon ion-wand"></i> <span>Create a Team</span></a>
+                        <a href="#/create"><i class="icon ion-wand"></i> <span>Create a Team</span> <i class="fa fa-lock pull-right" ng-if="loggedIn.value == false"></i></a>
                     </li>
                     <li class="treeview">
                         <a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a>
