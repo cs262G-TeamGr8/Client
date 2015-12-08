@@ -58,7 +58,6 @@ app.run(function ($rootScope) {
         "value": false,
         "username": 'Guest',
         "id": -1,
-        "email":'',
-        "btn": 'Login'
+        "email":''
     }
 });
