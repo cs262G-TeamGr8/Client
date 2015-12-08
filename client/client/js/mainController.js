@@ -13,6 +13,10 @@ var app = angular.module("CalvinIntramuralsApp")
 
 app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$compile', '$log', function ($rootScope, $scope, $http, $uibModal, $compile, $log) {
 
+    if ($rootScope.loggedIn.value) {
+
+    }
+
     /* Watches for any changes to loggedIn, signaling if someone has logged in to their account.
      * If the variable changes, first clear the list of teams. If a user is logged in, GET
      * list of teams from database and add to list. If user is not logged in, add default
@@ -20,6 +24,7 @@ app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$comp
      */
     $rootScope.$watch(function () { return $rootScope.loggedIn.value; }, function () {
         $("#myTeams").empty();
+        $("#top-menu").empty();
 
         // user is logged in
         if ($rootScope.loggedIn.value) {
@@ -35,6 +40,35 @@ app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$comp
             .error(function (data, status, headers, config) {
                 $log.info("Player login failure");
             });
+
+            $("#top-menu").append('<!-- User Account: style can be found in dropdown.less -->' +
+                '<li class="dropdown user user-menu">' +
+                    '<a href="#" class="dropdown-toggle" data-toggle="dropdown">' +
+                        '<img src="resources/user_icon.png" class="user-image" alt="User Image">' +
+                            '<span class="hidden-xs">' + $rootScope.loggedIn.username + '</span>' +
+                    '</a>' +
+                    '<ul class="dropdown-menu">' +
+                    '<!-- User image -->' +
+                        '<li class="user-header" style="background-color:#97252B">' +
+                            '<img src="resources/user_icon.png" class="img-circle" alt="User Image">' +
+                                '<p>' +
+                                    $rootScope.loggedIn.username +
+                                    '<small>"Win or Go Home"</small>' +
+                                '</p>' +
+                        '</li>' +
+                    '<!-- Menu Footer-->' +
+                        '<li class="user-footer">' +
+                            '<div class="pull-left">' +
+                                '<a href="#" class="btn btn-default btn-flat">Profile</a>' +
+                            '</div>' +
+                            '<div class="pull-right">' +
+                                '<a id="aLogout" class="btn btn-default btn-flat" ng-click="logout()">Log out</a>' +
+                            '</div>' +
+                        '</li>' +
+                    '</ul>' +
+                '</li>');
+
+            $compile($("#aLogout"))($scope);
         }
 
             // user is not logged in or logged off
@@ -44,6 +78,16 @@ app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$comp
             $("#myTeams").append('<li><a id="aTeam" href="#"><i>Login to view your teams</i></a></li>');
             $("#aTeam").attr("ng-click", "openLoginModal()");
             $compile($("#aTeam"))($scope);
+
+            $("#top-menu").append(
+                '<li class="dropdown user user-menu">' +
+                    '<!-- Menu Toggle Button -->' +
+                    '<a id="aLogin" class="dropdown-toggle" data-toggle="dropdown" ng-click="openLoginModal()">' +
+                        '<!-- The user image in the navbar-->' +
+                        '<span>Login</span>' +
+                    '</a>' +
+                '</li>');
+            $compile($("#aLogin"))($scope);
         }
     })
 
@@ -77,6 +121,15 @@ app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$comp
             //runs if modal is dismissed
             console.log("Results dismissed at: " + new Date());
         });
+    }
+
+    $scope.logout = function () {
+        $rootScope.loggedIn = {
+            "value": false,
+            "username": 'Guest',
+            "id": -1,
+            "email": ''
+        }
     }
 
 }]);
