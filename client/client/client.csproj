@@ -112,6 +112,7 @@
     <Content Include="resources\action-pic1.jpg" />
     <Content Include="resources\calvin-knight.png" />
     <Content Include="resources\header.png" />
+    <Content Include="resources\help_btn.png" />
     <Content Include="resources\title-word.png" />
     <Content Include="pages\home\home.html" />
     <Content Include="pages\league\league.html" />
