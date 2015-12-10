@@ -26,6 +26,13 @@ app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$comp
         $("#myTeams").empty();
         $("#top-menu").empty();
 
+        $("#top-menu").append(
+            '<li class="dropdown user user-menu">' +
+                '<a href="#" class="dropdown-toggle" data-toggle="dropdown">' +
+                    '<img src="resources/help_btn.png" class="user-image" alt="Help Button" />' +
+                '</a>' +
+            '</li>');
+
         // user is logged in
         if ($rootScope.loggedIn.value) {
             $http.get($rootScope.apiScope + "user/teams/" + $rootScope.loggedIn.username).success(function (result) {
