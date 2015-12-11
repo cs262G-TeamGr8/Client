@@ -9,11 +9,26 @@
     </div>
 
     <div class="box-body">
-        <h2>Schedule</h2>
-
-        <button ng-disabled="days==9999" ng-click="days=9999">All upcoming</button>
-        <button ng-disabled="days==7" ng-click="days=7">In The Next week</button>
-        <button ng-disabled="days==30" ng-click="days=30">In The Next month</button>
+        <div class="btn-group btn-group-justified" role="group" aria-label="toggle">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="toggle==0" ng-click="toggle=0">Schedule</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="toggle==1" ng-click="toggle=1">Roster</button>
+            </div>
+        </div>
+        <div ng-if="toggle==0">
+        <div class="btn-group btn-group-justified" role="group" aria-label="days">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="days==9999" ng-click="days=9999">All upcoming</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="days==7" ng-click="days=7">Next week</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="days==30" ng-click="days=30">Next month</button>
+            </div>
+        </div>
 
         <table class="table table-bordered">
             <tr>
@@ -29,6 +44,14 @@
                       
         </table>
  
+    </div>
+    <div ng-if="toggle==1">
+        <table class="table table-bordered">
+            <tr ng-repeat="x in roster">
+                <td >{{ x.name }}</td>
+            </tr>
+        </table>
+    </div>
     </div>
 
 </div>
