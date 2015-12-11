@@ -17,9 +17,12 @@ app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$u
         $("body").removeClass('sidebar-open');
     }
     $scope.days = 9999;
+    $scope.toggle = 0;
     $scope.message = $routeParams.name;
     $http.get($rootScope.apiScope + "team/schedule/" + $routeParams.name)
     .success(function (data) { $scope.schedule = JSON.parse(data); });
+    $http.get($rootScope.apiScope + "team/players/" + $routeParams.name)
+    .success(function (data) { $scope.roster = JSON.parse(data); });
 }]);
 
 app.filter("upComing", function () {
