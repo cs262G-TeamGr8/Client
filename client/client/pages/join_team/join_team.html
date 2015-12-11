@@ -1,9 +1,26 @@
-﻿<span>Join a Team</span>
-<br/>
-<select id="leagueSelect" required>
-    <option value="" selected="selected" disabled="disabled">Select a league</option>
-</select>
-<br/>
-<select id="teamSelect" required>
-    <option value="" selected="selected" disabled="disabled">Select a team</option>
-</select>
+﻿<div class="join-title">
+    <span>Join a Team</span>
+</div>
+<br />
+<div class="join-select">
+    <select id="leagueSelect" required>
+        <option value="" selected="selected" disabled="disabled">Select a league</option>
+    </select>
+</div>
+<br />
+<div class="join-select">
+    <select id="teamSelect" ng-model="selectedTeam" required>
+        <option value="" selected="selected" disabled="disabled">Select a team</option>
+    </select>
+</div>
+<div class="join-disclaimer">
+    <span>
+        By joining the {{selectedTeam}}, you will be a part of Calvin College Intramurals.
+        Be sure to check your team schedule for times of your games. Other information, such as standings
+        and league schedule can be found on the league page. For futher questions or concerns, please
+        do not hesitate to contact us.
+    </span>
+</div>
+<div class="center-align">
+    <button type="button" ng-click="joinTeam()" class="join-btn">Join</button>
+</div>

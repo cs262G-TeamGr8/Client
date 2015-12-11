@@ -12,6 +12,8 @@ var app = angular.module("CalvinIntramuralsApp")
 
 app.controller('JoinTeamCtrl', ['$rootScope', '$scope', '$http', '$log', function ($rootScope, $scope, $http, $log) {
 
+    $scope.selectedTeam = '____________';
+
     if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
         $("body").removeClass('sidebar-open');
     }
@@ -50,5 +52,16 @@ app.controller('JoinTeamCtrl', ['$rootScope', '$scope', '$http', '$log', functio
 
     });
 
-    $scope.message = "Join a Team";
+    $scope.joinTeam = function () {
+
+        var team = $('#teamSelect').val();
+        var url = 'user/join?userId=' + $rootScope.loggedIn.id + '&teamName=' + team;
+        $http.post($rootScope.apiScope + url).success(function (result) {
+            $rootScope.loggedIn.value = true;
+        })
+        .error(function (data, status, headers, config) {
+            alert("Create User did not work, please try again");
+        });
+    };
+
 }]);
