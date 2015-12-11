@@ -17,6 +17,7 @@ app.controller('LeagueCtrl', ['$rootScope', '$scope', '$http', '$routeParams', f
         $("body").removeClass('sidebar-open');
     }
 
+
     $scope.message = $routeParams.name;
     $http.get($rootScope.apiScope + "league/teams/" + $routeParams.name)
     .success(function (data) { $scope.standings = JSON.parse(data); });
@@ -24,3 +25,4 @@ app.controller('LeagueCtrl', ['$rootScope', '$scope', '$http', '$routeParams', f
     $http.get($rootScope.apiScope + "league/schedule/" + $routeParams.name)
     .success(function (data) { $scope.schedule = JSON.parse(data); });
 }]);
+

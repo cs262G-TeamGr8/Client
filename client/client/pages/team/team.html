@@ -10,19 +10,25 @@
 
     <div class="box-body">
         <h2>Schedule</h2>
+
+        <button ng-disabled="days==9999" ng-click="days=9999">All upcoming</button>
+        <button ng-disabled="days==7" ng-click="days=7">In The Next week</button>
+        <button ng-disabled="days==30" ng-click="days=30">In The Next month</button>
+
         <table class="table table-bordered">
             <tr>
                 <th>Home Team</th>
                 <th>Away Team</th>
                 <th>Date</th>
             </tr>
-            <tr ng-repeat="x in schedule | orderBy: 'date'">
-                <td>{{ x.home }}</td>
-                <td>{{ x.away }}</td>
+            <tr ng-repeat="x in schedule | upComing:days">
+                <td ng-class="{bold: x.home == message}">{{ x.home }}</td>
+                <td ng-class="{bold: x.away == message}">{{ x.away }}</td>
                 <td>{{ x.date | date:"MM/dd/yyyy 'at' h:mma" }}</td>
             </tr>
                       
         </table>
+ 
     </div>
 
 </div>

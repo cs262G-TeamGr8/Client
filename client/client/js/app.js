@@ -48,6 +48,11 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute", "ng
                     controller: 'JoinTeamCtrl'
                 })
 
+                // Contact Us Page
+                .when('/contact', {
+                    templateUrl: 'pages/contact/contact.html',
+                    controller: 'ContactCtrl'
+                })
         }]);
 
 // default setup when app runs
