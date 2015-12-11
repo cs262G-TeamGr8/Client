@@ -16,8 +16,19 @@ app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$u
     if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
         $("body").removeClass('sidebar-open');
     }
-
+    $scope.days = 9999;
     $scope.message = $routeParams.name;
     $http.get($rootScope.apiScope + "team/schedule/" + $routeParams.name)
     .success(function (data) { $scope.schedule = JSON.parse(data); });
 }]);
+
+app.filter("upComing", function () {
+    return function (items, days) {
+        var currDate = Date.now();
+        var endDate = currDate + (days * 86400000); // 1 day in ms
+        return items.filter(function (item) {
+            return (item.date > currDate && item.date < endDate);
+        });
+
+    };
+});

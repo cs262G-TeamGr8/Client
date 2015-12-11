@@ -82,6 +82,8 @@
     <Content Include="modals\login\loginController.js" />
     <Content Include="modals\signup\signup.html" />
     <Content Include="modals\signup\signupController.js" />
+    <Content Include="pages\contact\contact.html" />
+    <Content Include="pages\contact\contactController.js" />
     <Content Include="pages\create_team\create_team.html" />
     <Content Include="pages\create_team\create_teamController.js" />
     <Content Include="pages\home\homeController.js" />
@@ -96,7 +98,6 @@
     <Content Include="css\less\sidebar-mini.less" />
     <Content Include="css\less\sidebar.less" />
     <Content Include="css\less\skin-red-light.less" />
-    <None Include="Properties\PublishProfiles\IntramuralTest.pubxml" />
     <None Include="Properties\PublishProfiles\manji.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -135,7 +136,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51320</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
