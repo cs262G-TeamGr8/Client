@@ -1,0 +1,32 @@
+<!-- team.html -->
+<!-- Displays information regarding specific team -->
+
+<div class="box box-solid box-primary">
+    <div class="box-header with-border">
+        <h1>
+            {{message}}
+        </h1>
+    </div>
+
+    <div class="box-body">
+        <div class="btn-group btn-group-justified" role="group" aria-label="toggle">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="toggle==0" ng-click="toggle=0">Notifications</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="toggle==1" ng-click="toggle=1">Account</button>
+            </div>
+        </div>
+        <div ng-if="toggle==0">
+        <div class="btn-group btn-group-justified" role="group" aria-label="days">
+            <input type="checkbox" name="team-notifications" value="team"> Alert me about upcoming games for my teams<br>
+            <input type="checkbox" name="additional-notifications" value="additional" checked> Alert me about upcoming games for other teams<br>
+            <input type="text" name="lname"><br>
+            <input type="submit" value="Submit">
+        </div>
+ 
+    </div>
+
+    </div>
+
+</div>
