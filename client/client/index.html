@@ -149,7 +149,9 @@
                         <a ng-if="loggedIn.value == true" href="#/create"><i class="icon ion-wand"></i> <span>Create a Team</span></a>
                     </li>
                     <li class="treeview">
-                        <a href="#"><i class="fa fa-cog"></i> <span>Settings</span></a>
+                        <a ng-if="loggedIn.value == false"><i class="icon ion-wand"></i> <span>Settings</span> <i class="fa fa-lock pull-right"></i></a>
+                        <a ng-if="loggedIn.value == true" href="#/settings"><i class="icon ion-wand"></i> <span>Settings</span></a>
+                    </li>
                     </li>
                     <li class="treeview">
                         <a href="#/contact"><i class="fa fa-phone"></i> <span>Contact Us</span></a>
