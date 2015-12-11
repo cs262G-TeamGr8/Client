@@ -1,1 +1,23 @@
-﻿<span>Create a Team</span>
+﻿<div class="join-title">
+    <span>Create a Team</span>
+</div>
+<br />
+<div class="input-padding center-align">
+    <input type="text" class="team-name-select" placeholder="Enter team name here" />
+</div>
+<div class="join-select">
+    <select id="leagueSelect" required>
+        <option value="" selected="selected" disabled="disabled">Select a league</option>
+    </select>
+</div>
+<br />
+<div class="join-disclaimer">
+    <input type="checkbox" />
+    <span>
+        By creating this team, I acknowledge all of the rules and regulations posed by Calvin College
+        Intramurals. I hold the responsibility for this team and will show up for games on time.
+    </span>
+</div>
+<div class="center-align">
+    <button type="button" ng-click="createTeam()" class="join-btn">Create</button>
+</div>
