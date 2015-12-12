@@ -8,40 +8,45 @@
     </div>
 
     <div class="box-body">
-        <h2>Standings</h2>
-        <table class="table table-bordered">
-            <tr>
-                <th>Team</th>
-                <th>Wins</th>
-                <th>Losses</th>
-            </tr>
-            <tr ng-repeat="x in standings | orderBy:'(wins/(wins+losses))':true">
-                <td>{{ x.name }}</td>
-                <td>{{ x.wins }}</td>
-                <td>{{ x.losses }}</td>
-            </tr>
+        <div class="btn-group btn-group-justified" role="group" aria-label="toggle">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="toggle==0" ng-click="toggle=0">Schedule</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="toggle==1" ng-click="toggle=1">Standings</button>
+            </div>
+        </div>
+        <div ng-if="toggle==1">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Team</th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                </tr>
+                <tr ng-repeat="x in standings | orderBy:'(wins/(wins+losses))':true">
+                    <td>{{ x.name }}</td>
+                    <td>{{ x.wins }}</td>
+                    <td>{{ x.losses }}</td>
+                </tr>
 
-        </table>
+            </table>
+        </div>
+        <div ng-if="toggle==0">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Home Team</th>
+                    <th>Away Team</th>
+                    <th>Date</th>
+                </tr>
+                <tr ng-repeat="x in schedule">
+                    <td>{{ x.home }}</td>
+                    <td>{{ x.away }}</td>
+                    <td>{{ x.date | date:"MM/dd/yyyy 'at' h:mma" }}</td>
+                </tr>
+            </table>
+        </div>
+        </div>
     </div>
-</div>
 
-<div class="box box-solid box-primary">
-    <div class="box-body">
-        <h2>Schedule</h2>
-        <table class="table table-bordered">
-            <tr>
-                <th>Home Team</th>
-                <th>Away Team</th>
-                <th>Date</th>
-            </tr>
-            <tr ng-repeat="x in schedule">
-                <td>{{ x.home }}</td>
-                <td>{{ x.away }}</td>
-                <td>{{ x.date | date:"MM/dd/yyyy 'at' h:mma" }}</td>
-            </tr>
-        </table>
-    </div>
-</div>
-
-<! -- Add homepage content (schedules, news, pictures, etc) -- >
+    <! -- Add homepage content (schedules, news, pictures, etc) -- >
 
