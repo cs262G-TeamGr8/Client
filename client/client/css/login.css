@@ -217,8 +217,8 @@ input[type="radio"]:checked, input[type="radio"]:not(:checked) {
 }
 
 /* Team schedule*/
-.bold {
-    font-weight: bold;
+.colored {
+    background-color: rgba(151,37,43,.1);
 }
 
 th {
