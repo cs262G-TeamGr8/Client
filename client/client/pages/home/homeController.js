@@ -11,12 +11,26 @@
 var app = angular.module("CalvinIntramuralsApp")
 
 
-app.controller('HomeCtrl', ['$rootScope', '$scope', '$http', function ($rootScope, $scope, $http) {
+app.controller('HomeCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$log', function ($rootScope, $scope, $http, $uibModal, $log) {
 
     if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
         $("body").removeClass('sidebar-open');
     }
 
-    $scope.message = 'This is the home page!';
+    $scope.openSignUpModal = function () {
+        var modalInstance = $uibModal.open({
+            templateUrl: 'modals/signup/signup.html',
+            controller: 'SignUpCtrl',
+            animation: false,
+            windowClass: 'app-modal-window'
+        });
+
+        modalInstance.result.then(function () {
+            //runs in here if something passed back in close()
+        }, function () {
+            //runs if modal is dismissed
+            console.log("Results dismissed at: " + new Date());
+        });
+    }
 
 }]);
