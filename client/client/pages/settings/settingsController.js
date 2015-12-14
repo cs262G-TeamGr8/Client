@@ -16,11 +16,19 @@ app.controller('SettingsCtrl', ['$rootScope', '$scope', '$http', '$routeParams',
     if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
         $("body").removeClass('sidebar-open');
     }
-    $scope.days = 9999;
-    $scope.toggle = 0;
-    $scope.message = $routeParams.name;
-    $http.get($rootScope.apiScope + "settings/" + $routeParams.name)
-    .success(function (data) { $scope.schedule = JSON.parse(data); });
-    $http.get($rootScope.apiScope + "settings/" + $routeParams.name)
-    .success(function (data) { $scope.roster = JSON.parse(data); });
+
+    $scope.message = 'This is the settings page!';
+
+    // GET the list of current teams and for subscription settings
+    $http.get($rootScope.apiScope + "league/leagues/late fall").success(function (result) {
+        // user is logged in
+        if ($rootScope.loggedIn.value) {
+            $http.get($rootScope.apiScope + "user/teams/" + $rootScope.loggedIn.username).success(function (result) {
+                var $scope.teamList = JSON.parse(result);
+            })
+            .error(function (data, status, headers, config) {
+                $log.info("Player login failure");
+            });
+        }
+
 }]);

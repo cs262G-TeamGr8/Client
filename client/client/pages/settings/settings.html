@@ -4,7 +4,7 @@
 <div class="box box-solid box-primary">
     <div class="box-header with-border">
         <h1>
-            {{message}}
+            <!--{{message}}-->
         </h1>
     </div>
 
@@ -19,13 +19,22 @@
         </div>
         <div ng-if="toggle==0">
         <div class="btn-group btn-group-justified" role="group" aria-label="days">
-            <input type="checkbox" name="team-notifications" value="team"> Alert me about upcoming games for my teams<br>
-            <input type="checkbox" name="additional-notifications" value="additional" checked> Alert me about upcoming games for other teams<br>
-            <input type="text" name="lname"><br>
-            <input type="submit" value="Submit">
+            <table class="table table-bordered">
+                <tr>
+                    <th> </th>
+                    <th>Team</th>
+                </tr>
+                <tr ng-repeat="x in teamList">
+                    <td><input type="checkbox"></td>
+                    <td>{{ x.name }}</td>
+                </tr>
+            </table>
         </div>
- 
-    </div>
+        <div ng-if="toggle==1">
+            <div class="button">Change my profile picture</div>
+            <div class="button">Change my password</div>
+        </div>
+        </div>
 
     </div>
 

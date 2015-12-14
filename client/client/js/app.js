@@ -53,6 +53,13 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute", "ng
                     templateUrl: 'pages/contact/contact.html',
                     controller: 'ContactCtrl'
                 })
+
+                //Settings page
+                .when('/settings', {
+                    templateUrl: 'pages/settings/settings.html',
+                    controller: 'SettingsCtrl'
+                })
+
         }]);
 
 // default setup when app runs
