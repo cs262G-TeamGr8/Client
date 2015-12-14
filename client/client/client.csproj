@@ -86,6 +86,7 @@
     <Content Include="pages\contact\contactController.js" />
     <Content Include="pages\create_team\create_team.html" />
     <Content Include="pages\create_team\create_teamController.js" />
+    <Content Include="pages\faq\faq.html" />
     <Content Include="pages\home\homeController.js" />
     <Content Include="pages\join_team\join_team.html" />
     <Content Include="pages\join_team\join_teamController.js" />

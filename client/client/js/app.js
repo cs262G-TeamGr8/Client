@@ -54,6 +54,11 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute", "ng
                     controller: 'ContactCtrl'
                 })
 
+                // FAQ page
+                .when('/faq', {
+                    templateUrl: 'pages/faq/faq.html',
+                })
+
                 //Settings page
                 .when('/settings', {
                     templateUrl: 'pages/settings/settings.html',
