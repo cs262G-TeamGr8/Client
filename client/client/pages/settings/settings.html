@@ -1,0 +1,41 @@
+<!-- team.html -->
+<!-- Displays information regarding specific team -->
+
+<div class="box box-solid box-primary">
+    <div class="box-header with-border">
+        <h1>
+            <!--{{message}}-->
+        </h1>
+    </div>
+
+    <div class="box-body">
+        <div class="btn-group btn-group-justified" role="group" aria-label="toggle">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="toggle==0" ng-click="toggle=0">Notifications</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-disabled="toggle==1" ng-click="toggle=1">Account</button>
+            </div>
+        </div>
+        <div ng-if="toggle==0">
+        <div class="btn-group btn-group-justified" role="group" aria-label="days">
+            <table class="table table-bordered">
+                <tr>
+                    <th> </th>
+                    <th>Team</th>
+                </tr>
+                <tr ng-repeat="x in teamList">
+                    <td><input type="checkbox"></td>
+                    <td>{{ x.name }}</td>
+                </tr>
+            </table>
+        </div>
+        <div ng-if="toggle==1">
+            <div class="button">Change my profile picture</div>
+            <div class="button">Change my password</div>
+        </div>
+        </div>
+
+    </div>
+
+</div>
