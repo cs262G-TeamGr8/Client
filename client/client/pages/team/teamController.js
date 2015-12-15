@@ -10,12 +10,15 @@
 
 var app = angular.module("CalvinIntramuralsApp")
 
-app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$uibModal', function ($rootScope, $scope, $http, $routeParams, $uibModal) {
-
+app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$uibModal',
+    function ($rootScope, $scope, $http, $routeParams, $uibModal) {
+    
+    // automatically closes menu bar
     if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
         $("body").removeClass('sidebar-open');
     }
 
+    // checks if you ust joined the team
     $rootScope.justJoinedTeam.visitCtr++;
     if ($rootScope.justJoinedTeam.visitCtr > 1 && $rootScope.justJoinedTeam.value == true) {
         $rootScope.justJoinedTeam.value = false;
@@ -25,12 +28,18 @@ app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$u
     $scope.toggle = 0;
 
     $scope.message = $routeParams.name;
+
+    // GET: gets schedule for selected team
     $http.get($rootScope.apiScope + "team/schedule/" + $routeParams.name)
     .success(function (data) { $scope.schedule = JSON.parse(data); });
+
+    // GET: gets the roster of selected team
     $http.get($rootScope.apiScope + "team/players/" + $routeParams.name)
     .success(function (data) { $scope.roster = JSON.parse(data); });
 }]);
 
+
+// filter to display only upcoming games in the next variable days
 app.filter("upComing", function () {
     return function (items, days) {
         var currDate = Date.now();
