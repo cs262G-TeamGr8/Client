@@ -42,7 +42,7 @@ app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstanc
             $uibModalInstance.dismiss("cancel");
 
             // GET: returns the id and email address for the newly created account
-            $htt.get($rootScope.apiScope + '/user/info').success(function (result) {
+            $http.get($rootScope.apiScope + '/user/info').success(function (result) {
                 var info = JSON.parse(result);
                 $rootScope.loggedIn.id = info[0].ID;
                 $rootScope.loggedIn.email = info[0].email;
