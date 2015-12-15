@@ -37,7 +37,7 @@ app.controller('JoinTeamCtrl', ['$rootScope', '$scope', '$http', '$log', '$locat
         var league = this.value;
 
         $('#teamSelect').empty();
-        $('#teamSelect').append('<option value="" selected="selected" disabled="disabled">Select a league</option>');
+        $('#teamSelect').append('<option value="" selected="selected" disabled="disabled">Select a team</option>');
 
         $http.get($rootScope.apiScope + 'league/teams/' + league).success(function (result) {
             var teamList = JSON.parse(result);
