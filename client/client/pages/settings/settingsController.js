@@ -1,9 +1,9 @@
 /*---------------------------------------------------------------------------
 
-        The TeamCtrl is the controller for the myTeams option
-        in the menu bar. Based on the parameter sent in by $location, 
+        The SettingsCtrl is the controller for the settings option
+        in the menu bar. Based on the logined in profile, 
         this controller will display the current info regarding a specific
-        team for which the logged in user is a part of.
+        user and allow for some settings.
 
 -----------------------------------------------------------------------------*/
 
