@@ -27,7 +27,7 @@ app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstanc
 
         // creates account variable to be passed to database
         var account = {
-            Username: $("#fname").val() + " " + $("#lname").val,
+            Username: $("#fname").val() + " " + $("#lname").val(),
             Password: $("#password").val(),
             Email: $("#email").val()
         }
