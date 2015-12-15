@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/skin-red-light.min.css" />
     <link rel="stylesheet" href="css/template.min.css" />
     <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="css/notification.css" />
 
     <!-- SPELLS -->
     <!-- load angular and bootstrap -->
@@ -26,6 +27,7 @@
     <script src="js/includes/ui-bootstrap-tpls-0.14.3.min.js"></script>
     <script src="js/includes/jquery-1.11.3.min.js"></script>
     <script src="js/includes/bootstrap.min.js"></script>
+    <script src="js/includes/modernizr.custom.80028.js"></script>
     <script src="js/template.js"></script>
     <script src="js/app.js"></script>
 
@@ -120,7 +122,7 @@
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
                 <!-- Sidebar user panel (optional) -->
-                <div class="user-panel">
+                <div id="panel "class="user-panel">
                     <div class="pull-left image">
                         <img src="resources/user_icon.png" class="img-circle" alt="User Image">
                     </div>
@@ -151,7 +153,7 @@
                     </li>
                     <li class="treeview">
                         <a ng-if="loggedIn.value == false"><i class="icon ion-wand"></i> <span>Settings</span> <i class="fa fa-lock pull-right"></i></a>
-                        <a ng-if="loggedIn.value == true" href="#/settings"><i class="icon ion-wand"></i> <span>Settings</span></a>
+                        <a ng-if="loggedIn.value == true" href="#/settings"><i class="fa fa-cog"></i> <span>Settings</span></a>
                     </li>
                     </li>
                     <li class="treeview">

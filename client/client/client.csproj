@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\notification.css" />
     <Content Include="css\template.min.css" />
     <Content Include="css\skin-red-light.min.css" />
     <Content Include="js\includes\angular-animate.min.js" />
@@ -74,6 +75,7 @@
     <Content Include="js\app.js" />
     <Content Include="js\includes\bootstrap.min.js" />
     <Content Include="js\includes\jquery-1.11.3.min.js" />
+    <Content Include="js\includes\modernizr.custom.80028.js" />
     <Content Include="js\mainController.js" />
     <Content Include="js\template.js" />
     <Content Include="modals\forgotPassword\forgotPassword.html" />
@@ -113,6 +115,7 @@
     <Content Include="index.html" />
     <Content Include="resources\action-pic1.jpg" />
     <Content Include="resources\calvin-knight.png" />
+    <Content Include="resources\close.png" />
     <Content Include="resources\header.png" />
     <Content Include="resources\help_btn.png" />
     <Content Include="resources\title-word.png" />
