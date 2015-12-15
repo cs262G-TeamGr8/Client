@@ -40,6 +40,13 @@ app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstanc
             $rootScope.loggedIn.value = true;
             $rootScope.loggedIn.username = result;
             $uibModalInstance.dismiss("cancel");
+
+            // GET: returns the id and email address for the newly created account
+            $htt.get($rootScope.apiScope + '/user/info').success(function (result) {
+                var info = JSON.parse(result);
+                $rootScope.loggedIn.id = info[0].ID;
+                $rootScope.loggedIn.email = info[0].email;
+            });
         })
         .error(function (data, status, headers, config) {
             alert("Create User did not work, please try again");
