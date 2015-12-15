@@ -122,7 +122,7 @@
             <!-- sidebar: style can be found in sidebar.less -->
             <section class="sidebar">
                 <!-- Sidebar user panel (optional) -->
-                <div class="user-panel">
+                <div id="panel "class="user-panel">
                     <div class="pull-left image">
                         <img src="resources/user_icon.png" class="img-circle" alt="User Image">
                     </div>
@@ -153,7 +153,7 @@
                     </li>
                     <li class="treeview">
                         <a ng-if="loggedIn.value == false"><i class="icon ion-wand"></i> <span>Settings</span> <i class="fa fa-lock pull-right"></i></a>
-                        <a ng-if="loggedIn.value == true" href="#/settings"><i class="icon ion-wand"></i> <span>Settings</span></a>
+                        <a ng-if="loggedIn.value == true" href="#/settings"><i class="fa fa-cog"></i> <span>Settings</span></a>
                     </li>
                     </li>
                     <li class="treeview">

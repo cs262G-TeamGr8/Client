@@ -10,7 +10,7 @@
 
 var app = angular.module("CalvinIntramuralsApp")
 
-app.controller('JoinTeamCtrl', ['$rootScope', '$scope', '$http', '$log', function ($rootScope, $scope, $http, $log) {
+app.controller('JoinTeamCtrl', ['$rootScope', '$scope', '$http', '$log', '$location', function ($rootScope, $scope, $http, $log, $location) {
 
     $scope.selectedTeam = '____________';
 
@@ -57,10 +57,16 @@ app.controller('JoinTeamCtrl', ['$rootScope', '$scope', '$http', '$log', functio
         var team = $('#teamSelect').val();
         var url = 'user/join?userId=' + $rootScope.loggedIn.id + '&teamName=' + team;
         $http.post($rootScope.apiScope + url).success(function (result) {
-            $rootScope.loggedIn.value = true;
+
+            $rootScope.newTeam = $("#teamSelect").val();
+            $location.path('/team/' + $rootScope.newTeam);
+            $rootScope.justJoinedTeam.value = true;
+            $rootScope.justJoinedTeam.visitCtr = 0;
+            $rootScope.justJoinedTeam.message = "joined";
+
         })
         .error(function (data, status, headers, config) {
-            alert("Create User did not work, please try again");
+            alert("Join Team did not work, please try again");
         });
     };
 

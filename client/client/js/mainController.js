@@ -11,7 +11,8 @@
 var app = angular.module("CalvinIntramuralsApp")
 
 
-app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$compile', '$log', function ($rootScope, $scope, $http, $uibModal, $compile, $log) {
+app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$compile', '$log', '$location',
+    function ($rootScope, $scope, $http, $uibModal, $compile, $log, $location) {
 
     if ($rootScope.loggedIn.value) {
 
@@ -90,6 +91,17 @@ app.controller('MainCtrl', ['$rootScope', '$scope', '$http', '$uibModal', '$comp
             "id": -1,
             "email": ''
         }
+
+        $location.path('/');
     }
+
+    $rootScope.newTeam = ""
+ 
+    $rootScope.$watch(function () { return $rootScope.newTeam; }, function () {
+        if ($rootScope.newTeam != "") {
+        // user JQuery to append team list to sidebar menu
+            $("#myTeams").append('<li><a href="#/team/' + $rootScope.newTeam + '">' + $rootScope.newTeam + '</a></li>')
+        }
+    })
 
 }]);

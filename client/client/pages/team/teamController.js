@@ -8,7 +8,6 @@
 -----------------------------------------------------------------------------*/
 
 
-
 var app = angular.module("CalvinIntramuralsApp")
 
 app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$uibModal', function ($rootScope, $scope, $http, $routeParams, $uibModal) {
@@ -16,6 +15,12 @@ app.controller('TeamCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$u
     if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
         $("body").removeClass('sidebar-open');
     }
+
+    $rootScope.justJoinedTeam.visitCtr++;
+    if ($rootScope.justJoinedTeam.visitCtr > 1 && $rootScope.justJoinedTeam.value == true) {
+        $rootScope.justJoinedTeam.value = false;
+    }
+
     $scope.days = 9999;
     $scope.toggle = 0;
 

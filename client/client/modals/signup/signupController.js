@@ -20,10 +20,6 @@ app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstanc
         $scope.gender = value;
     })
 
-    $scope.$watch('findYearGender', function (value) {
-        $scope.year = value;
-    })
-
     $scope.signup = function () {
 
         var account = {

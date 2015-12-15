@@ -77,4 +77,10 @@ app.run(function ($rootScope) {
         "id": -1,
         "email":''
     }
+
+    $rootScope.justJoinedTeam = {
+        "value": false,
+        "visitCtr": 0,
+        "message": ''
+    }
 });

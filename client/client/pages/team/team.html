@@ -1,6 +1,12 @@
 <!-- team.html -->
 <!-- Displays information regarding specific team -->
 
+<div ng-if="justJoinedTeam.value == true">
+    <div id="note">
+        Successfully {{justJoinedTeam.message}} {{message}} <a id="close">[close]</a>
+    </div>
+</div>
+
 <div class="box box-solid box-primary">
     <div class="box-header with-border">
         <h1>
