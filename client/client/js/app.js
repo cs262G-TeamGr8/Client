@@ -38,7 +38,7 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute", "ng
 
                 // Create a Team Page
                 .when('/create', {
-                    templateUrl: 'pages/create_team/create_team.php',
+                    templateUrl: 'pages/create_team/create_team.html',
                     controller: 'CreateTeamCtrl'
                 })
 
