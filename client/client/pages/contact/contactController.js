@@ -6,9 +6,12 @@
 -----------------------------------------------------------------------------*/
 var app = angular.module("CalvinIntramuralsApp")
 
-app.controller('ContactCtrl', ['$rootScope', '$scope', '$http', '$routeParams', '$uibModal', function ($rootScope, $scope, $http, $routeParams, $uibModal) {
+app.controller('ContactCtrl', ['$rootScope', '$scope', '$http', '$routeParams', function ($rootScope, $scope, $http, $routeParams) {
 
     if ($(window).width() <= (767) && $("body").hasClass("sidebar-open")) {
         $("body").removeClass('sidebar-open');
     }
+
+    $scope.message = "Contact Us";
+
 }]);
