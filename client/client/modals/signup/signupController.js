@@ -9,37 +9,40 @@
 var app = angular.module("CalvinIntramuralsApp")
 
 
-app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance', '$uibModal', function ($rootScope, $scope, $http, $uibModalInstance, $uibModal) {
+app.controller('SignUpCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance', '$uibModal',
+    function ($rootScope, $scope, $http, $uibModalInstance, $uibModal) {
 
-
+    // closes modal
     $scope.cancel = function () {
         $uibModalInstance.dismiss("cancel");
     }
 
+    // watches for change in gender radio button
     $scope.$watch('findGender', function (value) {
         $scope.gender = value;
     })
 
+    // creates a new account with the given data in the form
     $scope.signup = function () {
 
+        // creates account variable to be passed to database
         var account = {
-            Username: document.getElementById("fname").value + " " + document.getElementById("lname").value,
-            Password: document.getElementById("password").value,
-            Email: document.getElementById("email").value
+            Username: $("#fname").val() + " " + $("#lname").val,
+            Password: $("#password").val(),
+            Email: $("#email").val()
         }
 
         var url = "user/new";
         url = $rootScope.apiScope + url;
+
+        // POST: creates a new user with the account variable data
         $http.post(url, JSON.stringify(account)).success(function (result) {
             $rootScope.loggedIn.value = true;
             $rootScope.loggedIn.username = result;
-            var name = result.split(" ")[0];
-            $rootScope.loggedIn.btn = "Hi, " + name;
             $uibModalInstance.dismiss("cancel");
         })
         .error(function (data, status, headers, config) {
             alert("Create User did not work, please try again");
         });
     }
-
 }]);

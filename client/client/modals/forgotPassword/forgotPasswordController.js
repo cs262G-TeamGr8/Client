@@ -6,14 +6,13 @@
 
 ----------------------------------------------------------------------*/
 
-
 var app = angular.module("CalvinIntramuralsApp")
 
+app.controller('ForgotPasswordCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance',
+    '$uibModal', function ($rootScope, $scope, $http, $uibModalInstance, $uibModal) {
 
-app.controller('ForgotPasswordCtrl', ['$rootScope', '$scope', '$http', '$uibModalInstance', '$uibModal', function ($rootScope, $scope, $http, $uibModalInstance, $uibModal) {
-
+    // closes modal
     $scope.cancel = function () {
         $uibModalInstance.dismiss("cancel");
     }
-
 }]);
