@@ -71,6 +71,8 @@ var app = angular.module("CalvinIntramuralsApp", ["ui.bootstrap", "ngRoute", "ng
 app.run(function ($rootScope) {
     var liveApi = "http://intramuralsapi.azurewebsites.net/api/";
     $rootScope.apiScope = liveApi;
+
+    // $rootScope.loggedIn controls the global logged in variables to display variables correctly
     $rootScope.loggedIn = {
         "value": false,
         "username": 'Guest',
@@ -78,6 +80,7 @@ app.run(function ($rootScope) {
         "email":''
     }
 
+    // $rootScope.justJoinedTeam controls the global variables for joining/creating a new team
     $rootScope.justJoinedTeam = {
         "value": false,
         "visitCtr": 0,
