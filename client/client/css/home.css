@@ -9,10 +9,13 @@ body {
 }
 
 .home-box {
-    position: absolute;
     top: 50px;
-    left: 750px;
-    width: 53%;
+    left: 50%;
+    width: 100%;
+}
+
+p#content {
+    font-size: 150%;
 }
 
 
